@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'WinRAR', image: 'images/winrar.jfif' },
     ];
 
-    const itemsPerPage = 10;
+    const itemsPerPage = 12;
     let currentPage = 0;
 
     function displayItems(page) {
