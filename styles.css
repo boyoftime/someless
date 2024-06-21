@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #b67f2d6f;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.logo-left-container {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+.logo-left {
+    height: 50px; /* Adjust size as necessary */
+}
+
+.logo-center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logo-center {
+    height: 100px; /* Adjust size as necessary */
+    margin-bottom: 10px;
+}
+
+input[type="search"] {
+    padding: 8px;
+    width: 50%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.software-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.software-item {
+    margin: 10px;
+    text-align: center;
+}
+
+.software-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.6); /* Orange shadow */
+}
