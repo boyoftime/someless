@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Download Site</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,51 +14,16 @@
         </div>
         <div class="logo-center-container">
             <img src="logo/logo2.png" alt="Logo Center" class="logo-center">
-            <input type="search" id="searchBar" placeholder="Search software...">
+            <input type="search" id="searchBar" placeholder="Search software..." class="glowing-search-bar">
         </div>
     </header>
     <main>
-        <div class="software-list">
-            <div class="software-item">
-                <img src="images/winrar.jfif" alt="WinRAR" class="software-image">
-                <p>WinRAR</p>
-            </div>
-            <div class="software-item">
-                <img src="images/winrar.jfif" alt="WinRAR" class="software-image">
-                <p>WinRAR</p>
-            </div>
-            <div class="software-item">
-                <img src="images/winrar.jfif" alt="WinRAR" class="software-image">
-                <p>WinRAR</p>
-            </div>
-            <div class="software-item">
-                <img src="images/winrar.jfif" alt="WinRAR" class="software-image">
-                <p>WinRAR</p>
-            </div>
-            <div class="software-item">
-                <img src="images/winrar.jfif" alt="WinRAR" class="software-image">
-                <p>WinRAR</p>
-            </div>
-            <div class="software-item">
-                <img src="images/winrar.jfif" alt="WinRAR" class="software-image">
-                <p>WinRAR</p>
-            </div>
-            <div class="software-item">
-                <img src="images/winrar.jfif" alt="WinRAR" class="software-image">
-                <p>WinRAR</p>
-            </div>
-            <div class="software-item">
-                <img src="images/winrar.jfif" alt="WinRAR" class="software-image">
-                <p>WinRAR</p>
-            </div>
-            <div class="software-item">
-                <img src="images/winrar.jfif" alt="WinRAR" class="software-image">
-                <p>WinRAR</p>
-            </div>
-            <div class="software-item">
-                <img src="images/winrar.jfif" alt="WinRAR" class="software-image">
-                <p>WinRAR</p>
-            </div>
+        <div class="software-list" id="software-list">
+            <!-- Software items will be dynamically inserted here -->
+        </div>
+        <div class="pagination">
+            <button id="prev-btn" disabled>Previous</button>
+            <button id="next-btn">Next</button>
         </div>
     </main>
 </body>
