@@ -123,3 +123,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     displayItems(currentPage);
 });
+
+// Add event listener for the request program button
+document.getElementById('requestProgramButton').addEventListener('click', function () {
+    // WhatsApp link with predefined message
+    const phoneNumber = '+255620428389';
+    const message = encodeURIComponent('Hello Someless, I would like to request a program.');
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.location.href = whatsappUrl;
+});
