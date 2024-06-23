@@ -1,6 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
-        // Example entry for a software item in scripts.js
+{
+    name: 'VideoScribe',
+    image: 'images/videoscribe.jfif',
+    size: 76.44, 
+    description: JSON.stringify({
+        about: 'VideoScribe is a user-friendly animation tool. It’s easy to create captivating animated videos, no matter your skill level, thanks to our intuitive interface and powerful features. Whether you’re a marketer, educator, or small business, our video animation tools will enhance your communications and save you time.',
+        features: ['User-friendly interface', 'Create captivating animated videos', 'Suitable for all skill levels', 'Powerful features', 'Ideal for marketers, educators, and small businesses'],
+        platforms: ['Windows 8','Windows 10', 'Windows 11']
+    }),
+    price: 15000,
+    downloadLink: 'https://www.mediafire.com/file/oa6lmus7zybfewt/VIDEOSCRIBE_FULL.zip/file'
+},
+        
+
 {
     name: 'Adobe Photoshop CC2019 Full activated)',
     image: 'images/photoshop2019.png',
