@@ -1,7 +1,124 @@
 document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
+        {
+            name: 'WinRAR Full activated',
+            image: 'images/winrar.jfif',
+            size: 6,
+            description: JSON.stringify({
+                about: 'WinRAR is a powerful archive manager for Windows, used to compress and extract files efficiently.',
+                features: ['File compression', 'File extraction', 'Support for multiple archive formats', 'Password protection', 'User-friendly interface'],
+                platforms: ['Windows']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/sig2llyidt8siln/WinRAR+v7.01+Final.zip/file'
+        },
+        
+        {
+            name: 'Filmora 10(X) Wondershare video editor (Full activated)',
+            image: 'images/filmora10.jfif',
+            size: 236, 
+            description: JSON.stringify({
+                about: 'Filmora 10 is a powerful video editor for Windows, with a lot of features like keyframe and much more.',
+                features: ['Keyframe animation', 'Video effects', 'Audio editing', 'User-friendly interface', 'High-quality output'],
+                platforms: ['Windows 8','Windows 10', 'Windows 11']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/1ztbnwt8d54wcs8/fILMORA_X.zip/file'
+        },
+        
+        {
+            name: 'God of War 2',
+            image: 'images/gow2.jfif', 
+            size: 3989, 
+            description: JSON.stringify({
+                about: 'God of War 2 is an adventure and fantasy game for the PS2 console, featuring a captivating story rooted in mythology.',
+                features: ['Epic adventure gameplay', 'Mythological storyline', 'Stunning graphics for PS2', 'Challenging puzzles and battles'],
+                platforms: ['PS2']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/lfva4hyciwu01hi/God_of_War2_0622352503.iso/file'
+        },
+        
+        {
+            name: 'USB Util Games',
+            image: 'images/usbutil.png',
+            size: 3.4, 
+            description: JSON.stringify({
+                about: 'USB Util Games is a PS2 games software to make games and convert them into ISO files or segments to read from USB or flash drives on PS2.',
+                features: ['Convert games to ISO files', 'Segment games for USB or flash drives', 'User-friendly interface', 'Supports PS2 games'],
+                platforms: ['Windows']
+            }),
+            price: 5000,
+            downloadLink: 'https://www.mediafire.com/file/8nf95lt87vdy6hc/USBUTIL_v2.2_rev1.0_EN.zip/file'
+        },
+        
+        {
+            name: 'Textify Free',
+            image: 'images/textify.jfif',
+            size: 0.5, 
+            description: JSON.stringify({
+                about: 'Textify is a Windows program to copy Windows texts that cannot be copied normally.',
+                features: ['Copy unselectable text', 'Easy to use', 'Supports various applications', 'Lightweight'],
+                platforms: ['Windows']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/ufa8ob8ctmb3r4a/textify_setup.exe/file'
+        },
+        
+        {
+            name: 'Super Copier Full activated (Free to use)',
+            image: 'images/supercopy.jfif',
+            size: 0.4, 
+            description: JSON.stringify({
+                about: 'Super Copier is a powerful program for Windows to copy files at speed and manage them faster.',
+                features: ['High-speed file copying', 'File management', 'User-friendly interface', 'Queue management', 'Error recovery'],
+                platforms: ['Windows']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/kud3q9chtbdxor1/SuperCopier22beta.exe/file'
+        },
+        
+        {
+            name: 'Virtual Dj 2020 Full activated (Free to use)',
+            image: 'images/virtual2020.jpg', 
+            size: 38.5, 
+            description: JSON.stringify({
+                about: 'Virtual Dj 2020 is a powerful tool for studio DJs, mixing music, making mega mixes, beats, and more.',
+                features: ['Professional DJ mixing', 'Create mega mixes', 'Beat making', 'User-friendly interface', 'Advanced audio effects'],
+                platforms: ['Windows']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/am2uxptmvw8nu6h/install_virtualdj_2020_b5630_pc64.msi/file'
+        },
+        
+        {
+            name: 'Office 2019 Activator Script (Free)',
+            image: 'images/office2019script.jfif', 
+            size: 0.075, 
+            description: JSON.stringify({
+                about: 'Office 2019 Activator Script is a text document (.txt) used to activate Office 2019 online using CMD on a computer.',
+                features: ['Activate Office 2019', 'Easy to use script', 'Uses CMD for activation', 'Online activation'],
+                platforms: ['Windows']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/lonrhesuur5ymw8/office_2019_activator.txt/file'
+        },
+        
+        {
+            name: 'LetStudy Free (E-Learning app let study)',
+            image: 'images/letstudy.jfif',
+            size: 77.99, 
+            description: JSON.stringify({
+                about: 'LetStudy is an application for students to learn different subjects for free, like mathematics, physics, biology, chemistry, civics, history, and much more.',
+                features: ['Learn various subjects for free', 'Subjects include mathematics, physics, biology, chemistry, civics, history, and more', 'User-friendly interface', 'Access to educational resources'],
+                platforms: ['Android']
+            }),
+            price:0,
+            downloadLink: 'https://www.mediafire.com/file/hn32rag6zq78x16/LetStudy.apk/file'
+        },
+        
 {
-    name: 'VideoScribe',
+    name: 'VideoScribe Full version (Crack) Activated',
     image: 'images/videoscribe.jfif',
     size: 76.44, 
     description: JSON.stringify({
@@ -42,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
 },
 
 {
-    name: 'Everything (Searching tool Free)',
+    name: 'Everything (Searching tool Free to use)',
     image: 'images/everything.png',
     size: 1.71,
     description: JSON.stringify({
