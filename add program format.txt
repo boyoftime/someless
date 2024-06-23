@@ -1,0 +1,12 @@
+{
+    name: '',
+    image: 'images/image name',
+    size: 1650,
+    description: JSON.stringify({
+        about: '',
+        features: ['', '', ''],
+        platforms: ['', '']
+    }),
+    price: 0,
+    downloadLink: ''
+},

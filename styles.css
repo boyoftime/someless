@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); /* Import a beautiful font */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Consistent font throughout the website */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+header {
+    background: linear-gradient(90deg, #b6b5b4, #7daff0);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgb(160, 65, 18); /* Glowing effect for header */
+}
+
+.logo-left-container {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+.logo-left {
+    height: 20px; /* Smaller size for better visibility on mobile */
+}
+
+.logo-center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.logo-center {
+    height: 70px; /* Adjust size for better visibility on mobile */
+    margin-bottom: 10px;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #007BFF; /* Blue border as in the image */
+    border-radius: 25px; /* Rounded edges */
+    width: 100%; /* Ensure container takes the width of the search bar */
+    max-width: 500px; /* Maximum width for larger screens */
+    margin-top: 10px;
+    position: relative; /* Allow absolute positioning for the button */
+    background-color: #fff; /* White background */
+}
+
+.glowing-search-bar {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none; /* Remove the border */
+    outline: none; /* Remove default outline */
+    width: 100%; /* Full width within the container */
+    border-radius: 25px; /* Rounded edges for the input field */
+    color: #333; /* Text color */
+    background-color: transparent; /* Transparent background */
+}
+
+.search-button {
+    background: #007BFF; /* Blue background for the button */
+    border: none;
+    border-top-right-radius: 25px; /* Rounded right corners */
+    border-bottom-right-radius: 25px; /* Rounded right corners */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    fill: white; /* White color for the icon */
+}
+
+main {
+    padding: 20px;
+    background: linear-gradient(to bottom, #b67f2d6f, brown); /* Gradient to connect header and list */
+}
+
+.software-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Utilize available space */
+}
+
+.programs-title {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.software-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Flexible and responsive grid */
+    gap: 20px; /* Consistent gap for spacing between items */
+    padding: 20px; /* Padding around the grid */
+    justify-content: center; /* Center grid items within the list container */
+}
+
+
+
+.software-item {
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Smooth transformation on hover */
+}
+
+.software-item:hover {
+    border: 2px dashed #ccc; /* Dashed border on hover for emphasis */
+}
+
+.software-item p {
+    font-size: 11px; /* Appropriate font size for visibility */
+    line-height: 1.2; /* Adjust line height for clear spacing between lines */
+    margin: 20px 0; /* Margin for spacing above and below text */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis when text overflows */
+    display: -webkit-box; /* Display as a flex-like box */
+    -webkit-box-orient: vertical; /* Orient children of the box vertically */
+    -webkit-line-clamp: 2; /* Limit text to two lines */
+    width: 100%; /* Ensure the paragraph uses the full width of its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+@media (max-width: 5000px) {
+    .software-list {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for small screens */
+        gap: 15px; /* Smaller gap suitable for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+.software-item img {
+    width: 80px; /* Fixed width for images */
+    height: 80px; /* Fixed height for images */
+    margin-bottom: -10px; /* Reduced space between image and text for compact look */
+}
+
+.no-results-message {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Glowing effect for text */
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: smaller;
+}
+
+.download-container {
+    background-color: brown;
+    box-shadow: 0 4px 8px rgb(160, 65, 18);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.neon-title {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.7),
+        0 0 10px rgba(255, 255, 255, 0.7),
+        0 0 20px rgba(255, 255, 255, 0.7),
+        0 0 40px rgba(255, 165, 0, 0.7),
+        0 0 80px rgba(255, 165, 0, 0.7),
+        0 0 90px rgba(255, 165, 0, 0.7),
+        0 0 100px rgba(255, 165, 0, 0.7),
+        0 0 150px rgba(255, 165, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.program-details img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.6);
+    margin: 0 auto; /* Center the image */
+}
+
+.program-details h2 {
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Ensure words break properly */
+    white-space: normal; /* Allow text to wrap to the next line */
+}
+
+.program-details p {
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.description-title {
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+}
+
+.description-box {
+    background-color: #fff;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#download-button {
+    padding: 10px 20px;
+    background-color: #f0e68c; /* Milk color */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove underline */
+    font-family: 'Poppins', sans-serif; /* Use beautiful font */
+}
+
+#download-button:hover {
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.8); /* Glowing effect */
+}
+
+#download-button img.download-icon {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+a#download-link {
+    display: inline-block;
+    text-decoration: none; /* Remove underline */
+}
+
+@media (max-width: 600px) {
+    .logo-center {
+        height: 50px; /* Adjusted size for better visibility on mobile */
+    }
+
+    .glowing-search-bar {
+        width: 80%;
+        font-size: 14px;
+    }
+
+   
+
+   
+
+    
+
+    .program-details h2 {
+        font-size: 16px; /* Reduced font size for mobile */
+    }
+
+   
+}
+
+.software-item.active {
+    box-shadow: 
+        0 0 5px rgba(255, 0, 255, 0.8), 
+        0 0 10px rgba(255, 0, 255, 0.6), 
+        0 0 20px rgba(255, 0, 255, 0.4), 
+        0 0 30px rgba(255, 0, 255, 0.2); /* Neon glowing effect */
+    border: 2px solid rgba(255, 0, 255, 0.8); /* Neon border */
+    cursor: pointer;
+    outline: none; /* Remove the default outline on focus */
+}
+
+
+.software-item:hover, .software-item:focus {
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.4); /* Enhanced glowing effect with beautiful colors */
+    cursor: pointer;
+    outline: none; /* Remove the default outline on focus */
+}
+
+footer a {
+    color: white; /* Set hyperlink color to white */
+    text-decoration: underline; /* Underline the hyperlink */
+}
+
+footer a:hover {
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* WhatsApp Button Styles */
+.whatsapp-button {
+    color: white; /* Button text color */
+    background-color: #25D366; /* WhatsApp green color */
+    padding: 8px 16px; /* Smaller padding for smaller devices */
+    border-radius: 25px;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    margin: 5px; /* Margin around the buttons */
+    display: inline-block;
+    font-size: 14px; /* Smaller font size for smaller devices */
+}
+
+.whatsapp-button:hover {
+    background-color: #20b358; /* Darker green on hover */
+}
+
+/* Contact Box Styles */
+.contact-box, .terms-box, .privacy-box {
+    background-color: brown;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for the box */
+    margin: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.contact-box h2, .terms-box h2, .privacy-box h2 {
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Glowing effect for text */
+}
+
+.contact-box p, .terms-box p, .privacy-box p {
+    margin-bottom: 20px;
+    font-size: 16px; /* Adjust font size for better readability */
+}
+
+@media (max-width: 600px) {
+    .whatsapp-button {
+        font-size: 12px; /* Smaller font size for smaller screens */
+        padding: 6px 12px; /* Smaller padding for smaller screens */
+    }
+}
+
+.glowing-message {
+    color: white;
+    font-size: 14px; /* Smaller font size */
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 
+        0 0 3px rgba(255, 255, 255, 0.7),
+        0 0 5px rgba(255, 255, 255, 0.7),
+        0 0 10px rgba(255, 165, 0, 0.7),
+        0 0 15px rgba(255, 165, 0, 0.7);
+}
+
+.header-links {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Header Links */
+.header-links {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10; /* Ensure links are on top */
+}
+
+.header-link {
+    color: white; /* Text color */
+    background-color: #007BFF; /* Background color */
+    padding: 5px 10px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Font size */
+}
+
+.header-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+@media (max-width: 600px) {
+    .header-links {
+        top: 5px;
+        right: 5px;
+        flex-direction: column; /* Stack links vertically */
+    }
+    .header-link {
+        font-size: 12px; /* Smaller font size for smaller screens */
+        padding: 3px 8px; /* Smaller padding for smaller screens */
+        margin-bottom: 5px; /* Space between stacked links */
+    }
+    .logo-center-container {
+        margin-top: 50px; /* Give space between links and logo */
+    }
+}
+
+/* About Section */
+.content-container {
+    background-color: brown;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for the box */
+    margin: 20px auto;
+    max-width: 800px; /* Restrict the max width */
+    color: white;
+}
+
+.content-container h1 {
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Glowing effect for text */
+    text-align: center;
+}
+
+.content-container p {
+    font-size: 16px; /* Adjust font size for better readability */
+    line-height: 1.6; /* Improve readability with line height */
+    margin-bottom: 20px;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for image */
+}
+
+.about-content {
+    text-align: justify; /* Justify text for better appearance */
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for the box */
+    color: white;
+}
+
+.about-content h2 {
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Glowing effect for text */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about-content p {
+    font-size: 16px; /* Adjust font size for better readability */
+    line-height: 1.6; /* Improve readability with line height */
+    margin-bottom: 20px;
+}
+
+/* Request Program Button */
+.request-button {
+    color: black; /* Button text color */
+    background-color: #FFF8DC; /* Milk color */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 25px;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    margin: 20px auto; /* Center the button with margin */
+    display: block; /* Make the button a block element */
+    text-align: center; /* Center the text */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.request-button:hover {
+    background-color: #FFEBCD; /* Lighter milk color on hover */
+}
+
+/* Programs Title */
+.programs-title {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Glowing effect for text */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.description-box {
+    background-color: #fff;
+    color: rgb(119, 57, 57);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 10px;
+    max-height: none; /* Ensure no maximum height is set */
+    overflow: visible; /* Ensure overflow is visible */
+    font-size: smaller;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.compatibility-title, .features-title {
+    margin-top: 20px;
+}
+
+.platforms-list, .features-list {
+    list-style-type: disc;
+    color: black;
+}
+
+
+

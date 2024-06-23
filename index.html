@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Someless</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-links">
+            <a href="index.html" class="header-link">Home</a>
+            <a href="about.html" class="header-link">About</a>
+        </div>
+        <div class="logo-left-container">
+            <img src="logo/logo1.png" alt="Logo Left" class="logo-left">
+        </div>
+        <div class="logo-center-container">
+            <img src="logo/logo2.png" alt="Logo Center" class="logo-center">
+            <div class="search-bar-container">
+                <input type="search" id="searchBar" placeholder="Search software..." class="glowing-search-bar">
+                <button id="searchButton" class="search-button">
+                    <img src="images/search-icon.png" alt="Search Icon" class="search-icon">
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content-container">
+            <button id="requestProgramButton" class="request-button">Call to Request a Program</button>
+            <h2 class="programs-title">Programs Available Now</h2>
+            <div class="software-list-container">
+                <div class="software-list" id="software-list">
+                    <!-- Program list items will be dynamically inserted here -->
+                </div>
+                <div id="no-results-message" class="no-results-message" style="display: none;">No programs found.</div>
+            </div>
+            <div class="pagination">
+                <button id="prev-btn" disabled>Previous</button>
+                <button id="next-btn" disabled>Next</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Someless. All rights reserved.</p>
+        <p>Trusted and Safe Downloads</p>
+        <p>
+            <a href="terms-and-privacy.html#terms">Terms of Service</a> | 
+            <a href="terms-and-privacy.html#privacy">Privacy Policy</a> | 
+            <a href="terms-and-privacy.html#contact">Contact Us</a>
+        </p>
+        <p>
+            Have questions or need support? Reach out to us via WhatsApp!
+            <a href="https://wa.me/255620428389?text=Hello%20Someless%20I%20need%20your%20help%20from%20your%20website" target="_blank" class="whatsapp-button">+255620428389</a> |
+            <a href="https://wa.me/255674100576?text=Hello%20Someless%20I%20need%20your%20help%20from%20your%20website" target="_blank" class="whatsapp-button">+255674100576</a>
+        </p>
+    </footer>
+</body>
+</html>
