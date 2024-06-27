@@ -1,7 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
         {
-            name: 'Microsoft Office 2016',
+            name: 'KMS Auto Activator',
+            image: 'images/kmsauto.jfif',
+            size: 10,
+            description: JSON.stringify({
+                about: 'KMS Auto is a tool used to activate Windows 10 and Office 2016.',
+                features: ['Activate Windows 10', 'Activate Office 2016', 'Easy to use', 'Automated activation process', 'Supports multiple languages'],
+                platforms: ['Windows']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/m31jkrnwodomyrw/KMSAuto-Net.zip/file'
+        },
+        
+        {
+            name: 'Microsoft Office 2016 Full (Best office of all time)',
             image: 'images/office2016.jfif',
             size: 2560, 
             description: JSON.stringify({
