@@ -1,6 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
         {
+            name: 'Microsoft Office 2016',
+            image: 'images/office2016.jfif',
+            size: 2560, 
+            description: JSON.stringify({
+                about: 'Microsoft Office 2016 is a comprehensive suite of productivity software that includes Word, Excel, PowerPoint, and more.',
+                features: ['Word processing', 'Spreadsheet management', 'Presentation creation', 'Email management with Outlook', 'Collaboration tools'],
+                platforms: ['Windows']
+            }),
+            price: 15000,
+            downloadLink: 'https://www.mediafire.com/file/4b4mci3uiwq656o/Microsoft_Office_2016.zip/file'
+        },
+        
+
+        {
             name: 'WinRAR Full activated',
             image: 'images/winrar.jfif',
             size: 6,
