@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 platforms: ['Windows 7', 'Windows 8','Windows 10', 'Windows 11']
             }),
             price: 10000,
-            downloadLink: 'https://www.mediafire.com/file/3murfgmyd9wusgm/idman640build1.rar/file'
+            downloadLink: 'https://www.mediafire.com/file/613oay4ov8wkpzc/idman642build14.exe/file'
         },
         {
             name: 'KMS Auto Activator',
