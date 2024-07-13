@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
         {
             name: 'Internet download manager (IDM) Full activated for life time (Tumia milele bila kulipia)',
-            image: 'images/idm.jfif',
+            image: 'images/idm.webp',
             size: 11,
             description: JSON.stringify({
                 about: 'Internet download manager (IDM) is the downloading tool that has more powerful feature that stimulates the downloading speed of the files through the internet, it has an extension that can be attached and installed in any browser for fast downloading',
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 platforms: ['Windows 7', 'Windows 8','Windows 10', 'Windows 11']
             }),
             price: 10000,
-            downloadLink: 'https://www.mediafire.com/file/613oay4ov8wkpzc/idman642build14.exe/file'
+            downloadLink: 'https://www.mediafire.com/file/zule7pjpxyt67lc/idman642build14.zip/file'
         },
         {
             name: 'KMS Auto Activator',
