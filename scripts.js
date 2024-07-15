@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
         {
+            name: 'Mantis Gamepad PRO full version',
+            image: 'images/mantis.jfif',
+            size: 75,
+            description: JSON.stringify({
+                about: 'Mantis help you to play any android game using game pad(Controller), u can use PS2 pad, or PS3,PS4 or PC pad to play android games free',
+                features: ['powerfull control', 'Easy to use', 'support many games'],
+                platforms: ['android']
+            }),
+            price: 10000,
+            downloadLink: 'https://www.mediafire.com/file/s9q9u3jlb2d0o3e/Mantis_Gamepad_Pro.apk/file'
+        },
+        {
             name: 'Internet download manager (IDM) Full activated for life time (Tumia milele bila kulipia)',
             image: 'images/idm.webp',
             size: 11,
