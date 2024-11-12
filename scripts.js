@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
         {
+            name: 'Beach Buggy Racing Unlimited',
+            image: 'images/beach-buggy.jpg',
+            size: 0.73,
+            description: JSON.stringify({
+                about: 'Beach buggy is the famous kart racing game now since 2021, it has beautiful roads map and interesting features that makes this game to be so unique all the time. With this small data files , you will be able to get unlimited Coins, Gems, And infinity tickets for Beach buggy game',
+                features: ['Unlimited coins', 'Unlimited Gems', 'Infinity entry tickets', 'All in-game cars Unlocked', 'Killawatt unlocked', 'Split-screen mode Unlocked'],
+                platforms: ['Windows 8, 10 , 11']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/iqrx9jrdhyzmgca/beach-buggy-data.zip/file'
+        },
+        {
             name: 'Mantis Gamepad PRO full version',
             image: 'images/mantis.jfif',
             size: 75,
