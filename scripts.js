@@ -1,6 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
         {
+            name: 'Utra viewer 6.6',
+            image: 'images/utra.jpg',
+            size: 0.00,
+            description: JSON.stringify({
+                about: 'The best and easy remote sharing software available for free. Software version 6.6',
+                features: ['Unlimited access'],
+                platforms: ['Windows 8, 10 , 11']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/c7liy5eebztjrzs/UltraViewer_setup_6.6.110_en.exe/file'
+        }
+        ,
+        {
             name: 'Beach Buggy Racing Unlimited',
             image: 'images/beach-buggy.jpg',
             size: 0.73,
