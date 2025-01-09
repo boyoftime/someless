@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
         {
-            name: 'Hill Climb Racing PC Data',
+            name: 'Hill Climb Racing Unlimited',
             image: 'images/hill climb.jpeg',
             size: 0.59,
             description: JSON.stringify({
