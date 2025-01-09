@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
         {
             name: 'Hill Climb Racing PC Data',
-            image: 'images/hill climb.jpg',
+            image: 'images/hill climb.jpeg',
             size: 0.59,
             description: JSON.stringify({
                 about: 'This data will help you get the most you want in Hill Climb Racing game with Unlimited Coins + Diamonds',
