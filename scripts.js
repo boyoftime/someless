@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             name: 'Hill Climb Racing Unlimited',
             image: 'images/hill climb.jpeg',
-            size: 0.59,
+            size: 0.49,
             description: JSON.stringify({
-                about: 'This data will help you get the most you want in Hill Climb Racing game with Unlimited Coins + Diamonds',
+                about: 'This data will help you get the most you want in Hill Climb Racing game on PC  with Unlimited Coins + Diamonds',
                 features: ['Unlimited Coins','Unlimited Diamonds'],
-                platforms: ['PC Only']
+                platforms: ['Windows PC Only']
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/lqyizk98ekq8o4b/Hill_Climb_Racing_Data.zip/file'
