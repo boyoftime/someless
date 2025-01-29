@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
         {
             name: 'Beach Buggy Racing Updated Datafile 2025 (Unlimited everything)',
-            image: 'images/beach_buggy.jpg',
+            image: 'images/beach-buggy.jpg',
             size: 0.98,
             description: JSON.stringify({
                 about: 'Here is the new update of the game , Coming with new cars unlocked and levels unlocked. Beach buggy is the famous kart racing game now since 2021, it has beautiful roads map and interesting features that makes this game to be so unique all the time. With this small data files , you will be able to get unlimited Coins, Gems, And infinity tickets for Beach buggy game',
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         ,
         {
-            name: 'Beach Buggy Racing Unlimited',
+            name: 'Beach Buggy Racing Unlimited 2024 Datafile',
             image: 'images/beach-buggy.jpg',
             size: 0.73,
             description: JSON.stringify({
