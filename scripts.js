@@ -1,6 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
         {
+            name: 'Beach Buggy Racing Updated Datafile 2025 (Unlimited everything)',
+            image: 'images/beach_buggy.jpg',
+            size: 0.98,
+            description: JSON.stringify({
+                about: 'Here is the new update of the game , Coming with new cars unlocked and levels unlocked. Beach buggy is the famous kart racing game now since 2021, it has beautiful roads map and interesting features that makes this game to be so unique all the time. With this small data files , you will be able to get unlimited Coins, Gems, And infinity tickets for Beach buggy game',
+                features: ['Unlimited coins', 'Unlimited Gems', 'Infinity entry tickets', 'All in-game cars Unlocked', 'Killawatt unlocked', 'Split-screen mode Unlocked and much more'],
+                platforms: ['Windows PC Only']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/dg8247t3hf6xluw/Beach_Buggy_Racing_Updated_Data_2025.zip/file'
+        }
+        ,
+        {
             name: 'Hill Climb Racing Unlimited',
             image: 'images/hill climb.jpeg',
             size: 0.49,
