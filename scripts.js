@@ -1,5 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
     const softwareItems = [
+
+        {
+            name: 'Angry Bird2 SDF',  // # Changed game name to "Angry Bird2 SDF" to reflect the correct game.
+            image: 'images/angrybird2.jpg',  // # Updated image path to match the Angry Bird2 theme.
+            size: 0.38,
+            description: JSON.stringify({
+                about: 'Introducing the latest update SDF for Angry Bird2! Enjoy new levels with Unlimited Gems + hats, improved physics, and enhanced graphics that take the classic gameplay to new heights. Experience challenging puzzles and unique bird characters in this revamped update.',  // # Revised description to remove references to other games and focus on Angry Bird2.
+                features: [
+                    'Unlimited Gems',            // # New feature specific to Angry Bird2.
+                    'Unlimited hats',
+                    'NO ban, Play online with unlimited powers',                  // # Emphasizes the addition of new game levels.
+                    'Everything is Unlimited in this game SDF'          // # Highlights the graphical improvements.
+                ],
+                platforms: ['Windows PC Only']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/7arjlhboscwhmbu/Angry_Bird2_SDF.zip/file'  // # Download link remains the same.
+        }
+        ,
+
         {
             name: 'Beach Buggy Racing Updated Datafile 2025 (Unlimited everything)',
             image: 'images/beach-buggy.jpg',
