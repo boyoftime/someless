@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 platforms: ['Windows PC Only']
             }),
             price: 0,
-            downloadLink: 'https://www.mediafire.com/file/7arjlhboscwhmbu/Angry_Bird2_SDF.zip/file'  // # Download link remains the same.
+            downloadLink: 'https://www.mediafire.com/file/vfae8fbpi6xjy42/Angry_Bird2_SDF.zip/file'  // # Download link remains the same.
         }
         ,
 
