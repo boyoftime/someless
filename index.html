@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Download reliable software easily. Explore our curated collection of tools and applications."> <!-- Updated Description -->
+    <meta name="description" content="Download reliable software easily. Explore our curated collection of tools and applications.">
     <meta name="robots" content="index, follow">
 
-    <title>Someless - Trusted Software Downloads</title> <!-- Updated Title -->
-    <!-- Removed link to external styles.css -->
+    <title>Someless - Trusted Software Downloads</title>
     <script src="scripts.js" defer></script>
     <style>
         /* --- Start of Embedded CSS --- */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); /* Import Poppins with more weights */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
         :root {
             --primary-color: #007BFF;
             --secondary-color: #6c757d;
             --light-color: #f8f9fa;
             --dark-color: #343a40;
-            /* Updated Header Gradient for a slightly more modern feel */
             --header-gradient-start: #3a7bd5;
             --header-gradient-end: #00d2ff;
-            --body-gradient-start: #f4f6f9; /* Very light gray */
-            --body-gradient-end: #e9ecef; /* Light gray */
+            --body-gradient-start: #f4f6f9;
+            --body-gradient-end: #e9ecef;
             --card-bg: #ffffff;
             --text-color: #333;
             --heading-color: #222;
-            --accent-color: #ff8c42; /* Orange accent */
-            --shadow-color: rgba(0, 0, 0, 0.08); /* Softer shadow */
+            --accent-color: #ff8c42;
+            --shadow-color: rgba(0, 0, 0, 0.08);
             --whatsapp-green: #25D366;
-            --header-height: 70px; /* Define header height */
+            --header-height: 70px;
         }
 
         *, *::before, *::after {
@@ -54,27 +52,27 @@
         }
 
         main {
-            flex-grow: 1; /* Ensures main content takes available space */
-            padding: 30px 15px; /* More vertical padding */
-            padding-top: calc(var(--header-height) + 30px); /* Add padding to offset fixed header if implemented, otherwise adjust as needed */
+            flex-grow: 1;
+            padding: 30px 15px;
+            padding-top: calc(var(--header-height) + 30px); /* Adjust based on fixed header */
         }
 
-        /* --- Updated Header Styles --- */
+        /* --- Header Styles --- */
         header {
             background: linear-gradient(90deg, var(--header-gradient-start), var(--header-gradient-end));
             color: white;
-            padding: 0 20px; /* Adjust padding for vertical alignment */
-            display: flex; /* Use flex directly on header */
+            padding: 0 20px;
+            display: flex;
             justify-content: center;
             align-items: center;
-            position: fixed; /* Make header fixed */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: var(--header-height);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Consistent shadow */
-            z-index: 1000; /* Ensure header stays on top */
-            transition: background-color 0.3s ease; /* Smooth transition if needed */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            transition: height 0.3s ease; /* Add transition for height change */
         }
 
         .header-inner {
@@ -82,329 +80,170 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            max-width: 1200px; /* Constrain width */
+            max-width: 1200px;
         }
 
         .logo-container {
-             flex-shrink: 0; /* Prevent logo from shrinking */
+             flex-shrink: 0;
+             z-index: 1001; /* Ensure logo is clickable over mobile nav */
         }
 
         .main-logo {
-            height: 45px; /* Adjust logo size */
+            height: 45px;
             display: block;
             transition: transform 0.3s ease;
         }
-         .main-logo:hover {
-             transform: scale(1.05); /* Slight grow on hover */
-         }
+        .main-logo:hover {
+             transform: scale(1.05);
+        }
 
         .header-right-group {
             display: flex;
             align-items: center;
-            gap: 20px; /* Space between nav and search */
+            gap: 20px;
         }
 
+        /* Standard Desktop Navigation */
         .header-nav {
-            display: flex;
-            gap: 10px; /* Space between nav links */
+            display: flex; /* Visible on desktop by default */
+            gap: 10px;
         }
 
         .header-link {
             color: white;
             text-decoration: none;
-            font-size: 15px; /* Slightly smaller nav text */
+            font-size: 15px;
             font-weight: 600;
-            padding: 8px 15px; /* Padding for clickable area */
+            padding: 8px 15px;
             border-radius: 6px;
             transition: background-color 0.2s ease, color 0.2s ease;
-            position: relative; /* For potential effects */
-            background-color: transparent; /* Default transparent background */
+            background-color: transparent;
+        }
+        .header-link:hover, .header-link.active {
+            background-color: rgba(255, 255, 255, 0.15);
         }
 
-        .header-link:hover, .header-link.active { /* Add active class if needed */
-            background-color: rgba(255, 255, 255, 0.15); /* Subtle background on hover */
-        }
-
-        /* --- Search Bar Styles --- */
+        /* Search Bar Styles */
         .search-bar-container {
-            display: flex;
+            display: flex; /* Visible on desktop by default */
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
-            border-radius: 20px; /* Rounded pill shape */
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
             width: 100%;
-            max-width: 320px; /* Adjust max width */
-            /* box-shadow: 0 1px 4px rgba(0,0,0,0.05); */ /* Optional softer shadow */
+            max-width: 320px;
             position: relative;
             overflow: hidden;
-             transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease;
         }
-        .search-bar-container:focus-within { /* Highlight when input is focused */
+        .search-bar-container:focus-within {
              background-color: rgba(255, 255, 255, 0.3);
         }
 
-
-        .search-input { /* Renamed class */
-            padding: 8px 15px 8px 20px; /* Adjust padding */
+        .search-input {
+            padding: 8px 15px 8px 20px;
             font-size: 14px;
             border: none;
             outline: none;
-            width: calc(100% - 40px); /* Width minus button width */
+            width: calc(100% - 40px);
             border-radius: 20px 0 0 20px;
-            color: white; /* White text color */
+            color: white;
             background-color: transparent;
             font-family: 'Poppins', sans-serif;
         }
         .search-input::placeholder {
-            color: rgba(255, 255, 255, 0.7); /* Lighter placeholder */
+            color: rgba(255, 255, 255, 0.7);
             opacity: 1;
         }
+         /* Hide Webkit/Edge clear button */
+        .search-input::-webkit-search-decoration,
+        .search-input::-webkit-search-cancel-button,
+        .search-input::-webkit-search-results-button,
+        .search-input::-webkit-search-results-decoration {
+             display: none;
+             -webkit-appearance: none;
+        }
+        /* Hide IE clear button */
+        .search-input::-ms-clear { display: none; width : 0; height: 0; }
+        .search-input::-ms-reveal { display: none; width : 0; height: 0; }
+
 
         .search-button {
-            background: transparent; /* Make button background transparent */
+            background: transparent;
             border: none;
             border-radius: 0 20px 20px 0;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px; /* Fixed width for button */
-            height: 36px; /* Match input height approx */
+            width: 40px;
+            height: 36px;
             position: absolute;
             right: 0;
             top: 0;
             transition: background-color 0.2s ease;
         }
-
         .search-button:hover {
-            background-color: rgba(0,0,0, 0.1); /* Subtle dark hover */
+            background-color: rgba(0,0,0, 0.1);
         }
 
         .search-icon {
             width: 16px;
             height: 16px;
-            filter: brightness(0) invert(1); /* Ensure icon is white */
+            filter: brightness(0) invert(1);
             opacity: 0.8;
         }
         .search-button:hover .search-icon {
              opacity: 1;
         }
 
-
-        /* --- Main Content Styles (Mostly unchanged) --- */
-        .content-container {
-            max-width: 1200px;
-            margin: 0 auto; /* Remove top margin as padding is handled by main */
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7); /* Less transparent */
-            border-radius: 15px;
-            box-shadow: 0 5px 20px var(--shadow-color);
-        }
-
-        .request-button {
-            display: block;
-            width: fit-content;
-            margin: 0 auto 35px auto; /* More bottom margin */
-            padding: 12px 25px;
-            background: linear-gradient(135deg, var(--accent-color), #ffae7a);
-            color: white;
+        /* --- NEW: Mobile Navigation Toggle Button --- */
+        .mobile-nav-toggle {
+            display: none; /* Hidden on desktop */
+            background: none;
             border: none;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(255, 140, 66, 0.4);
-            transition: transform 0.2s ease, box-shadow 0.3s ease;
-        }
-
-        .request-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(255, 140, 66, 0.5);
-        }
-
-        .programs-title {
-            text-align: center;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--heading-color);
-            margin-top: 0;
-            margin-bottom: 30px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .programs-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
-            margin: 8px auto 0;
-        }
-
-        .software-list-container {
-            display: block;
-        }
-
-        .software-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Slightly wider min */
-            gap: 25px;
-            padding: 0;
-            justify-content: center;
-        }
-
-        .software-item {
-            text-align: center;
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px var(--shadow-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            border: 1px solid #eee;
-            position: relative; /* For price overlay if needed */
-        }
-
-        .software-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-            border-color: var(--primary-color);
-        }
-
-        .software-item img.software-image {
-            width: 90px;
-            height: 90px;
-            margin-bottom: 10px; /* Less space */
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        .software-item p.item-name { /* Added class */
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 1.4;
-            margin: 5px 0; /* Add vertical margin */
-            height: 40px; /* Approx height for 2 lines */
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-            width: 100%;
-            color: var(--heading-color);
-        }
-
-        .software-item p.item-price { /* Added class */
-            font-size: 13px;
-            font-weight: 700;
-            margin-top: 5px; /* Space above price */
-            padding: 3px 8px;
-            border-radius: 4px;
-        }
-        .software-item p.price-free { /* Style for free items */
-             color: #28a745; /* Green */
-             background-color: #e9f7ec;
-        }
-        .software-item p.price-paid { /* Style for paid items */
-             color: var(--accent-color); /* Orange */
-             background-color: #fff3e8;
-        }
-
-        .no-results-message {
-            text-align: center;
-            color: var(--secondary-color);
-            font-size: 18px;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 8px;
-        }
-
-        .pagination {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .pagination button {
-            padding: 10px 20px;
-            margin: 0 8px;
-            border: none;
-            background-color: var(--primary-color);
             color: white;
+            font-size: 28px; /* Size of burger icon */
             cursor: pointer;
-            border-radius: 20px;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            padding: 5px 10px;
+            line-height: 1;
+            margin-left: 10px; /* Space from search if visible */
+             z-index: 1001; /* Ensure it's clickable */
         }
 
-        .pagination button:hover:not(:disabled) {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
+        /* --- Main Content Styles (Unchanged) --- */
+        .content-container { max-width: 1200px; margin: 0 auto; padding: 20px; background-color: rgba(255, 255, 255, 0.7); border-radius: 15px; box-shadow: 0 5px 20px var(--shadow-color); }
+        .request-button { display: block; width: fit-content; margin: 0 auto 35px auto; padding: 12px 25px; background: linear-gradient(135deg, var(--accent-color), #ffae7a); color: white; border: none; border-radius: 25px; font-size: 16px; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; box-shadow: 0 4px 10px rgba(255, 140, 66, 0.4); transition: transform 0.2s ease, box-shadow 0.3s ease; }
+        .request-button:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(255, 140, 66, 0.5); }
+        .programs-title { text-align: center; font-size: 28px; font-weight: 700; color: var(--heading-color); margin-top: 0; margin-bottom: 30px; position: relative; padding-bottom: 10px; }
+        .programs-title::after { content: ''; display: block; width: 60px; height: 4px; background-color: var(--primary-color); border-radius: 2px; margin: 8px auto 0; }
+        .software-list-container { display: block; }
+        .software-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 25px; padding: 0; justify-content: center; }
+        .software-item { text-align: center; background-color: var(--card-bg); color: var(--text-color); padding: 15px; border-radius: 10px; box-shadow: 0 4px 15px var(--shadow-color); display: flex; flex-direction: column; align-items: center; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 1px solid #eee; position: relative; }
+        .software-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); border-color: var(--primary-color); }
+        .software-item img.software-image { width: 90px; height: 90px; margin-bottom: 10px; border-radius: 8px; object-fit: cover; }
+        .software-item p.item-name { font-size: 14px; font-weight: 600; line-height: 1.4; margin: 5px 0; height: 40px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; width: 100%; color: var(--heading-color); }
+        .software-item p.item-price { font-size: 13px; font-weight: 700; margin-top: 5px; padding: 3px 8px; border-radius: 4px; }
+        .software-item p.price-free { color: #28a745; background-color: #e9f7ec; }
+        .software-item p.price-paid { color: var(--accent-color); background-color: #fff3e8; }
+        .no-results-message { text-align: center; color: var(--secondary-color); font-size: 18px; margin-top: 40px; padding: 20px; background-color: rgba(255, 255, 255, 0.7); border-radius: 8px; }
+        .pagination { text-align: center; margin-top: 40px; }
+        .pagination button { padding: 10px 20px; margin: 0 8px; border: none; background-color: var(--primary-color); color: white; cursor: pointer; border-radius: 20px; font-weight: 600; transition: background-color 0.3s ease, transform 0.2s ease; }
+        .pagination button:hover:not(:disabled) { background-color: #0056b3; transform: scale(1.05); }
+        .pagination button:disabled { background-color: #cccccc; cursor: not-allowed; opacity: 0.7; }
 
-        .pagination button:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-            opacity: 0.7;
-        }
-
-        footer {
-            background-color: var(--dark-color);
-            color: var(--light-color);
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: 40px;
-            width: 100%;
-            font-size: 14px;
-        }
-
-        footer p {
-            margin: 8px 0;
-            opacity: 0.8;
-        }
-
-        footer a {
-            color: #a7d8ff;
-            text-decoration: none;
-            transition: color 0.3s ease, text-decoration 0.3s ease;
-        }
-
-        footer a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
-        .whatsapp-button {
-            color: white;
-            background-color: var(--whatsapp-green);
-            padding: 8px 18px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 5px;
-            display: inline-block;
-            font-size: 14px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .whatsapp-button:hover {
-            background-color: #1ebe57;
-            transform: scale(1.05);
-        }
+        /* --- Footer Styles (Unchanged) --- */
+        footer { background-color: var(--dark-color); color: var(--light-color); text-align: center; padding: 25px 20px; margin-top: 40px; width: 100%; font-size: 14px; }
+        footer p { margin: 8px 0; opacity: 0.8; }
+        footer a { color: #a7d8ff; text-decoration: none; transition: color 0.3s ease, text-decoration 0.3s ease; }
+        footer a:hover { color: white; text-decoration: underline; }
+        .whatsapp-button { color: white; background-color: var(--whatsapp-green); padding: 8px 18px; border-radius: 20px; text-decoration: none; font-weight: 600; margin: 5px; display: inline-block; font-size: 14px; transition: background-color 0.3s ease, transform 0.2s ease; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+        .whatsapp-button:hover { background-color: #1ebe57; transform: scale(1.05); }
 
         /* --- Responsive Adjustments --- */
         @media (max-width: 768px) {
+             :root { --header-height: 65px; } /* Slightly shorter header */
              main {
-                 padding-top: calc(var(--header-height) + 20px); /* Adjust padding */
+                 padding-top: calc(var(--header-height) + 20px);
              }
             .header-inner {
                  padding: 0 15px;
@@ -412,71 +251,85 @@
             .main-logo {
                  height: 40px; /* Smaller logo */
             }
+
+            /* Hide desktop nav, show mobile toggle */
+            .header-nav {
+                 display: none;
+            }
+            .mobile-nav-toggle {
+                 display: block; /* Show burger */
+            }
+
+            /* Adjust right group spacing */
             .header-right-group {
-                 gap: 15px; /* Less gap */
+                 gap: 10px; /* Less gap between search and burger */
             }
-             .header-nav {
-                 /* Option 1: Hide nav (requires burger menu JS) */
-                 /* display: none; */
-                 /* Option 2: Keep nav, maybe reduce padding */
-                 gap: 5px;
-             }
-             .header-link {
-                 font-size: 14px;
-                 padding: 6px 10px;
-             }
             .search-bar-container {
-                 max-width: 250px; /* Smaller search */
+                 max-width: 220px; /* Further reduce search bar size */
             }
-             .search-input { font-size: 13px; padding: 8px 10px 8px 15px;}
-             .search-button { width: 35px; height: 34px;}
-             .search-icon { width: 15px; height: 15px;}
+
+            /* Styling for the mobile navigation when active */
+            header.mobile-nav-active {
+                 /* Allow header to expand height if needed */
+                 height: auto;
+                 padding-bottom: 10px; /* Add padding when nav open */
+                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+            }
+            header.mobile-nav-active .header-inner {
+                 flex-wrap: wrap; /* Allow inner items to wrap */
+                 row-gap: 15px; /* Add gap between rows when wrapped */
+            }
+
+            header.mobile-nav-active .header-nav {
+                 display: flex; /* Show the nav */
+                 flex-direction: column; /* Stack links vertically */
+                 width: 100%; /* Take full width */
+                 align-items: center; /* Center links */
+                 gap: 5px; /* Adjust gap */
+                 margin-top: 10px; /* Space below header main row */
+                 background-color: rgba(0, 0, 0, 0.1); /* Optional subtle background */
+                 padding: 10px 0;
+                 border-radius: 8px;
+            }
+            header.mobile-nav-active .header-link {
+                 padding: 10px 20px; /* Larger clickable area */
+                 width: 90%; /* Make links wide */
+                 text-align: center;
+                 background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+            }
+             header.mobile-nav-active .header-link:hover {
+                  background-color: rgba(255, 255, 255, 0.2);
+             }
+
 
             .programs-title { font-size: 24px; }
             .software-list {
-                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Adjust grid */
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
                 gap: 20px;
             }
         }
 
-        @media (max-width: 576px) {
-            :root { --header-height: 60px; } /* Shorter header */
-            main {
-                padding-top: calc(var(--header-height) + 15px);
-            }
+        @media (max-width: 480px) {
+             :root { --header-height: 60px; } /* Even shorter */
+             main {
+                 padding-top: calc(var(--header-height) + 15px);
+             }
              header { padding: 0 10px; }
-            .header-inner {
-                 flex-wrap: wrap; /* Allow wrapping */
-                 justify-content: center; /* Center items when wrapped */
-                 row-gap: 10px; /* Gap when wrapped */
-             }
-             .logo-container {
-                 /* Ensure logo stays on left when not wrapped */
-                 flex-basis: auto;
-                 margin-right: auto; /* Pushes right group away */
-             }
-            .main-logo { height: 35px; }
+             .main-logo { height: 35px; }
 
-            .header-right-group {
-                 flex-basis: 100%; /* Take full width when wrapped */
-                 justify-content: center; /* Center nav and search */
-                 gap: 10px;
-                 flex-wrap: wrap; /* Allow nav and search to wrap too */
+             /* Keep search visible, burger on right */
+             .header-right-group {
+                 /* Ensure search doesn't get too small */
+                 min-width: 180px;
              }
-             .header-nav {
-                 order: 2; /* Put nav below search if wrapped */
-                 gap: 5px;
-                 flex-basis: 100%; /* Full width */
-                 justify-content: center; /* Center nav links */
+             .search-bar-container {
+                 max-width: 180px; /* Adjust as needed */
              }
-             .header-link { font-size: 13px; padding: 5px 8px;}
+             .search-input { padding: 8px 10px 8px 15px; font-size: 13px;}
+             .search-button { width: 35px; height: 34px; }
+             .search-icon { width: 15px; height: 15px; }
+             .mobile-nav-toggle { font-size: 26px; }
 
-            .search-bar-container {
-                 order: 1; /* Put search above nav */
-                 max-width: 90%; /* Almost full width */
-                 margin: 0 auto; /* Center search bar */
-             }
-            .search-input { flex-grow: 1; } /* Allow input to take space */
 
              .request-button { font-size: 15px; padding: 10px 20px;}
              .software-list { grid-template-columns: repeat(2, 1fr); gap: 15px;}
@@ -491,26 +344,33 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-inner"> <!-- New wrapper -->
-            <div class="logo-container"> <!-- Logo on Left -->
+    <!-- Apply mobile-nav-active class here via JS -->
+    <header id="site-header">
+        <div class="header-inner">
+            <div class="logo-container">
                 <a href="index.html">
                     <img src="logo/logo2.png" alt="Someless Logo" class="main-logo">
                 </a>
             </div>
 
-            <div class="header-right-group"> <!-- Nav and Search Group -->
-                <nav class="header-nav"> <!-- Navigation -->
-                    <a href="index.html" class="header-link active">Home</a> <!-- Added active class for demo -->
+            <div class="header-right-group">
+                <!-- Desktop Navigation (Hidden on Mobile) -->
+                <nav class="header-nav" id="main-nav">
+                    <a href="index.html" class="header-link active">Home</a>
                     <a href="about.html" class="header-link">About</a>
                 </nav>
 
-                <div class="search-bar-container"> <!-- Search -->
-                    <input type="search" id="searchBar" placeholder="Search software..." class="search-input">
-                    <button id="searchButton" class="search-button" aria-label="Search"> <!-- Added aria-label -->
-                        <img src="images/search-icon.png" alt="" class="search-icon"> <!-- Alt empty as button has aria-label -->
+                <div class="search-bar-container">
+                    <input type="search" id="searchBar" placeholder="Search..." class="search-input"> <!-- Shortened Placeholder -->
+                    <button id="searchButton" class="search-button" aria-label="Search">
+                        <img src="images/search-icon.png" alt="" class="search-icon">
                     </button>
                 </div>
+
+                <!-- Mobile Navigation Toggle (Hidden on Desktop) -->
+                <button class="mobile-nav-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="main-nav">
+                    ☰ <!-- Standard burger icon HTML entity -->
+                </button>
             </div>
         </div>
     </header>
@@ -532,39 +392,61 @@
     </main>
     <footer>
         <p>© 2024-2025 Someless. All rights reserved.</p>
-        <p>Trusted Software Downloads</p> <!-- Slightly updated text -->
+        <p>Trusted Software Downloads</p>
         <p>
             <a href="terms-and-privacy.html#terms">Terms of Service</a> |
             <a href="terms-and-privacy.html#privacy">Privacy Policy</a> |
             <a href="terms-and-privacy.html#contact">Contact Us</a>
         </p>
         <p>
-            Have questions or need support? Reach out via WhatsApp! <!-- Shortened -->
+            Have questions or need support? Reach out via WhatsApp!
             <a href="https://wa.me/255620428389?text=Hello%20Someless,%20I%20need%20help%20from%20your%20website." target="_blank" class="whatsapp-button">+255620428389</a>
         </p>
     </footer>
 
-    <!-- JavaScript for Enter key search -->
+    <!-- JavaScript for Mobile Nav Toggle & Enter key search -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('searchBar');
-            const searchButton = document.getElementById('searchButton'); // Assuming scripts.js handles the actual search logic via this button's click
+            // --- Mobile Nav Toggle ---
+            const header = document.getElementById('site-header');
+            const toggleButton = document.querySelector('.mobile-nav-toggle');
+            const mainNav = document.getElementById('main-nav'); // The nav element
 
-            if (searchInput && typeof searchItems === 'function') { // Check if input exists and search function is available (from scripts.js)
+            if (toggleButton && mainNav && header) {
+                toggleButton.addEventListener('click', function() {
+                    header.classList.toggle('mobile-nav-active'); // Toggle class on header
+                    const isExpanded = header.classList.contains('mobile-nav-active');
+                    this.setAttribute('aria-expanded', isExpanded); // Update ARIA attribute
+                });
+            }
+
+            // --- Enter Key Search ---
+            const searchInput = document.getElementById('searchBar');
+            const searchButton = document.getElementById('searchButton');
+
+            if (searchInput && typeof searchItems === 'function') {
                  searchInput.addEventListener('keypress', function(event) {
                     if (event.key === 'Enter') {
-                        event.preventDefault(); // Prevent default form submission if applicable
-                        // Directly call the search function defined in scripts.js
-                        searchItems(this.value);
+                        event.preventDefault();
+                        searchItems(this.value); // Call search function from scripts.js
+                        // Optional: Close mobile menu if open after search
+                        if (header && header.classList.contains('mobile-nav-active')) {
+                             header.classList.remove('mobile-nav-active');
+                             toggleButton.setAttribute('aria-expanded', 'false');
+                        }
                     }
                  });
             } else if (searchInput && searchButton) {
-                 // Fallback: If searchItems function isn't directly accessible,
-                 // simulate a click on the search button when Enter is pressed.
+                 // Fallback: Simulate button click
                  searchInput.addEventListener('keypress', function(event) {
                      if (event.key === 'Enter') {
                          event.preventDefault();
-                         searchButton.click(); // Trigger the click event listener attached in scripts.js
+                         searchButton.click();
+                          // Optional: Close mobile menu if open after search
+                         if (header && header.classList.contains('mobile-nav-active')) {
+                             header.classList.remove('mobile-nav-active');
+                             toggleButton.setAttribute('aria-expanded', 'false');
+                         }
                      }
                  });
             }
