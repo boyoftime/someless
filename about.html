@@ -4,48 +4,306 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Someless</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- No external CSS link needed -->
+    <style>
+        /* --- Start of Embedded CSS --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); /* Import Poppins with more weights */
+
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #6c757d;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --header-gradient-start: #3a7bd5; /* Consistent Header Gradient */
+            --header-gradient-end: #00d2ff; /* Consistent Header Gradient */
+            --body-gradient-start: #f4f6f9;
+            --body-gradient-end: #e9ecef;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --heading-color: #222;
+            --accent-color: #ff8c42;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --whatsapp-green: #25D366;
+            --header-height: 70px; /* Define header height */
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(180deg, var(--body-gradient-start), var(--body-gradient-end));
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 30px 15px;
+            /* Add padding to offset fixed header */
+            padding-top: calc(var(--header-height) + 30px);
+        }
+
+        /* --- Fixed Header Styles (Consistent) --- */
+        header {
+            background: linear-gradient(90deg, var(--header-gradient-start), var(--header-gradient-end));
+            color: white;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed; /* Fixed header */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .main-logo {
+            height: 45px;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+         .main-logo:hover {
+             transform: scale(1.05);
+         }
+
+        .header-nav { /* Navigation only on the right */
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-link {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            background-color: transparent;
+        }
+
+        .header-link:hover, .header-link.active { /* Style for active page link */
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* --- Footer Styles (Consistent) --- */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 8px 0;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: #a7d8ff;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .whatsapp-button {
+            color: white;
+            background-color: var(--whatsapp-green);
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 5px;
+            display: inline-block;
+            font-size: 14px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe57;
+            transform: scale(1.05);
+        }
+
+
+        /* --- Styles for About Page Content --- */
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto; /* Centered, margin-top handled by main padding */
+            padding: 35px; /* Slightly more padding */
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+        }
+
+        .content-container > h1 { /* Page Title */
+             text-align: center;
+             color: var(--heading-color);
+             font-size: 28px;
+             font-weight: 700;
+             margin-bottom: 25px; /* Space before image */
+             position: relative;
+             padding-bottom: 10px;
+        }
+        .content-container > h1::after { /* Underline effect */
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+            margin: 8px auto 0;
+        }
+
+        .about-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 0 auto 30px auto; /* Center and add bottom margin */
+            display: block;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .about-content { /* Inner box for text sections */
+            background-color: transparent; /* Remove inner box background */
+            color: var(--text-color);
+            padding: 0; /* Remove inner padding */
+            border-radius: 0;
+            box-shadow: none; /* Remove inner shadow */
+            margin-top: 0; /* Remove margin */
+            text-align: left;
+        }
+
+        .about-content h2 { /* Section headings */
+            color: var(--primary-color);
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 30px; /* Space between sections */
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee; /* Separator line */
+            padding-bottom: 8px;
+        }
+        .about-content h2:first-of-type {
+             margin-top: 0; /* No top margin for the very first h2 */
+         }
+
+        .about-content p {
+            font-size: 16px;
+            line-height: 1.7; /* Better readability */
+            margin-bottom: 18px; /* More space after paragraphs */
+            color: #555;
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            main {
+                padding-top: calc(var(--header-height) + 20px);
+            }
+             .header-inner { padding: 0 15px; }
+             .main-logo { height: 40px; }
+             .header-link { font-size: 14px; padding: 6px 10px;}
+
+             .content-container { padding: 25px; }
+             .content-container > h1 { font-size: 24px; }
+             .about-content h2 { font-size: 20px; }
+        }
+
+        @media (max-width: 480px) {
+            :root { --header-height: 60px; }
+            main {
+                padding-top: calc(var(--header-height) + 15px);
+            }
+             header { padding: 0 10px; }
+             .main-logo { height: 35px; }
+             .header-link { font-size: 13px; padding: 5px 8px;}
+
+             .content-container { padding: 20px; } /* Adjust padding */
+             .content-container > h1 { font-size: 22px; margin-bottom: 20px;}
+             .about-image { margin-bottom: 25px; }
+             .about-content h2 { font-size: 19px; margin-top: 25px;}
+             .about-content p { font-size: 15px; line-height: 1.65; }
+
+             footer { padding: 20px 15px; font-size: 13px; }
+             .whatsapp-button { font-size: 13px; padding: 7px 15px; }
+        }
+        /* --- End of Embedded CSS --- */
+    </style>
 </head>
 <body>
     <header>
-        <div class="header-links">
-            <a href="index.html" class="header-link">Home</a>
-            <a href="about.html" class="header-link">About</a>
-        </div>
-        <div class="logo-left-container">
-            <img src="logo/logo1.png" alt="Logo Left" class="logo-left">
-        </div>
-        <div class="logo-center-container">
-            <img src="logo/logo2.png" alt="Logo Center" class="logo-center">
+        <div class="header-inner"> <!-- Consistent Header Structure -->
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="logo/logo2.png" alt="Someless Logo" class="main-logo">
+                </a>
+            </div>
+            <nav class="header-nav"> <!-- Navigation only -->
+                <a href="index.html" class="header-link">Home</a>
+                <a href="about.html" class="header-link active">About</a> <!-- Set this as active -->
+            </nav>
         </div>
     </header>
     <main>
         <div class="content-container">
             <h1>About Someless</h1>
-            <img src="images/about-image.webp" alt="About Image" class="about-image">
+            <img src="images/about-image.webp" alt="Illustration representing software and community" class="about-image"> <!-- Updated alt text -->
             <div class="about-content">
                 <h2>Our Mission</h2>
-                <p>Welcome to Someless, your trusted platform for premium software at low prices. Our mission is to provide high-quality software that is safe to use and already activated for perpetual use. Most people are likely to find our platform beneficial due to our competitive pricing and reliable service.</p>
-                  
+                <p>Welcome to Someless, your trusted partner for accessible software solutions. Our mission is to provide reliable, high-quality software tools designed for extended use, ensuring a seamless and valuable experience for our users. We aim to bridge the gap by making essential software more attainable through fair pricing and dependable service.</p>
+
                 <h2>What We Offer</h2>
-                <p>At Someless, we offer a wide range of software products that cater to various needs. Whether you are looking for productivity tools, creative software, or utility programs, we have something for everyone. Our software is carefully selected to ensure it meets the highest standards of quality and performance.</p>
-                
+                <p>At Someless, we feature a curated selection of software products designed to meet diverse needs – covering productivity, creativity, and utility applications. Every item in our catalog is carefully reviewed to meet standards of performance and usability. We strive to be a reliable source for your software requirements.</p>
+
                 <h2>Why Choose Us</h2>
-                <p>Choosing Someless means you are opting for reliability, affordability, and excellence. Our team is dedicated to providing you with the best possible experience, from browsing our catalog to installing and using our products. We are here to support you every step of the way.</p>
+                <p>Choosing Someless means prioritizing reliability, value, and user support. Our team is dedicated to providing a positive experience, from easy browsing and downloading to offering assistance when needed. We focus on providing trustworthy resources and are committed to supporting our user community.</p>
             </div>
         </div>
     </main>
     <footer>
-        <p>&copy; 2024-2025 Someless. All rights reserved.</p>
-        <p>Trusted and Safe Downloads</p>
+        <p>© 2024-2025 Someless. All rights reserved.</p>
+        <p>Reliable Software Downloads</p>
         <p>
-            <a href="terms-and-privacy.html#terms">Terms of Service</a> | 
-            <a href="terms-and-privacy.html#privacy">Privacy Policy</a> | 
+            <a href="terms-and-privacy.html#terms">Terms of Service</a> |
+            <a href="terms-and-privacy.html#privacy">Privacy Policy</a> |
             <a href="terms-and-privacy.html#contact">Contact Us</a>
         </p>
         <p>
-            Have questions or need support? Reach out to us via WhatsApp!
-            <a href="https://wa.me/255620428389?text=Hello%20Someless%20I%20need%20your%20help%20from%20your%20website" target="_blank" class="whatsapp-button">+255620428389</a> |
+            Have questions or need support? Reach out via WhatsApp!
+            <a href="https://wa.me/255620428389?text=Hello%20Someless,%20I%20need%20help%20from%20your%20website." target="_blank" class="whatsapp-button">+255620428389</a>
         </p>
     </footer>
 </body>

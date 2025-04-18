@@ -3,105 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service and Privacy Policy</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Terms, Privacy & Contact - Someless</title> <!-- Updated Title -->
+    <!-- No external CSS link needed -->
+    <style>
+      /* --- Start of Embedded CSS --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #6c757d;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --header-gradient-start: #3a7bd5; /* Consistent Header Gradient */
+            --header-gradient-end: #00d2ff; /* Consistent Header Gradient */
+            --body-gradient-start: #f4f6f9;
+            --body-gradient-end: #e9ecef;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --heading-color: #222;
+            --accent-color: #ff8c42;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --whatsapp-green: #25D366;
+            --header-height: 70px; /* Define header height */
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+             scroll-behavior: smooth; /* Smooth scroll for internal links */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(180deg, var(--body-gradient-start), var(--body-gradient-end));
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 30px 15px;
+            /* Add padding to offset fixed header */
+            padding-top: calc(var(--header-height) + 30px);
+        }
+
+        /* --- Fixed Header Styles (Consistent) --- */
+        header {
+            background: linear-gradient(90deg, var(--header-gradient-start), var(--header-gradient-end));
+            color: white;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed; /* Fixed header */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .main-logo {
+            height: 45px;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .main-logo:hover {
+             transform: scale(1.05);
+         }
+
+        .header-nav { /* Navigation only on the right */
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-link {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            background-color: transparent;
+        }
+
+        .header-link:hover, .header-link.active {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* --- Footer Styles (Consistent) --- */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 8px 0;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: #a7d8ff;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .whatsapp-button {
+            color: white;
+            background-color: var(--whatsapp-green);
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 5px;
+            display: inline-block;
+            font-size: 14px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe57;
+            transform: scale(1.05);
+        }
+
+        /* --- Styles for Terms/Privacy Page Content --- */
+         .content-container {
+            max-width: 900px;
+            margin: 0 auto; /* Centered, margin-top handled by main padding */
+            padding: 0; /* Remove padding from container, add to sections */
+            background-color: transparent; /* No background */
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .content-container > h1 { /* Main Page Title */
+             text-align: center;
+             color: var(--heading-color);
+             font-size: 28px;
+             font-weight: 700;
+             margin-bottom: 35px; /* Space before first section */
+             position: relative;
+             padding-bottom: 10px;
+        }
+        .content-container > h1::after { /* Underline effect */
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+            margin: 8px auto 0;
+        }
+
+        section { /* Target sections directly */
+             /* Offset for fixed header clicking internal links */
+             scroll-margin-top: calc(var(--header-height) + 20px);
+             padding: 30px 35px; /* Add padding to sections */
+             background-color: var(--card-bg); /* White background for sections */
+             border-radius: 15px;
+             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Shadow for sections */
+             margin-bottom: 35px; /* Space between sections */
+             text-align: left;
+        }
+        /* Remove redundant classes if sections are styled directly */
+        /* .terms-box, .privacy-box, .contact-box { ... } */
+
+
+        section h2 { /* Section Titles */
+            color: var(--primary-color);
+            font-size: 24px; /* Slightly larger */
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 25px; /* More space below title */
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        section ul { /* Styling for lists within sections */
+            padding-left: 25px;
+            margin-top: -5px;
+            margin-bottom: 15px;
+        }
+        section li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        section h3 { /* Subheadings within Sections */
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        /* Specific styling for contact section buttons */
+        section#contact {
+            text-align: center;
+        }
+        section#contact p:last-of-type { /* Target the paragraph containing buttons */
+            margin-top: 20px; /* Space above buttons */
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            main {
+                padding-top: calc(var(--header-height) + 20px);
+            }
+             .header-inner { padding: 0 15px; }
+             .main-logo { height: 40px; }
+             .header-link { font-size: 14px; padding: 6px 10px;}
+
+             .content-container { max-width: 100%; }
+             .content-container > h1 { font-size: 24px; }
+             section { padding: 25px; }
+             section h2 { font-size: 20px; }
+        }
+
+        @media (max-width: 480px) {
+            :root { --header-height: 60px; }
+            main {
+                padding-top: calc(var(--header-height) + 15px);
+            }
+             header { padding: 0 10px; }
+             .main-logo { height: 35px; }
+             .header-link { font-size: 13px; padding: 5px 8px;}
+
+             .content-container > h1 { font-size: 22px; margin-bottom: 25px;}
+             section { padding: 20px; margin-bottom: 25px; } /* Adjust padding/margin */
+             section h2 { font-size: 19px; margin-bottom: 20px; }
+             section p, section li { font-size: 15px; }
+             section h3 { font-size: 17px; }
+
+             footer { padding: 20px 15px; font-size: 13px; }
+             .whatsapp-button { font-size: 13px; padding: 7px 15px; }
+        }
+      /* --- End of Embedded CSS --- */
+    </style>
 </head>
 <body>
     <header>
-        <div class="header-links">
-            <a href="index.html" class="header-link">Home</a>
-            <a href="about.html" class="header-link">About</a>
-        </div>
-        <div class="logo-left-container">
-            <img src="logo/logo1.png" alt="Logo Left" class="logo-left">
-        </div>
-        <div class="logo-center-container">
-            <img src="logo/logo2.png" alt="Logo Center" class="logo-center">
+        <div class="header-inner"> <!-- Consistent Header Structure -->
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="logo/logo2.png" alt="Someless Logo" class="main-logo">
+                </a>
+            </div>
+            <nav class="header-nav"> <!-- Navigation only -->
+                <a href="index.html" class="header-link">Home</a>
+                <a href="about.html" class="header-link">About</a>
+                <!-- Optionally add active class here if needed for T&C page -->
+                <!-- <a href="terms-and-privacy.html" class="header-link active">Terms</a> -->
+            </nav>
         </div>
     </header>
     <main>
         <div class="content-container">
-            <h1>Terms of Service and Privacy Policy</h1>
+            <h1>Terms, Privacy & Contact</h1>
 
-            <section id="terms" class="terms-box">
+            <section id="terms"> <!-- Removed class="terms-box" -->
                 <h2>Terms of Service</h2>
-                <p>Welcome to Someless, your trusted platform for premium software at low prices. By accessing and using our services, you agree to comply with and be bound by the following terms and conditions.</p>
-                
+                <p>Welcome to Someless. By accessing and using our website and services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.</p>
+
                 <h3>1. Acceptance of Terms</h3>
-                <p>By accessing our website and using our services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
-                
-                <h3>2. Modification of Terms</h3>
-                <p>Someless reserves the right to change these terms from time to time as it sees fit. Your continued use of the site will signify your acceptance of any adjustment to these terms.</p>
-                
-                <h3>3. User Responsibilities</h3>
-                <p>Users are expected to use our services legally and ethically. Any misuse, including but not limited to, violating laws, infringing on intellectual property rights, or engaging in harmful activities, is strictly prohibited.</p>
-                
-                <h3>4. Account Terms</h3>
-                <p>Users are responsible for maintaining the security of their account and password. Someless will not be liable for any loss or damage from user failure to comply with this security obligation.</p>
-                
+                <p>By accessing our website (someless.com or related domains) and utilizing the services provided, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, please refrain from using our site and services.</p>
+
+                <h3>2. Service Description</h3>
+                <p>Someless provides a platform for users to discover and download various software applications. Some software may be offered free of charge, while others require payment. We provide access to software intended for extended use; however, users are solely responsible for ensuring they possess the necessary rights and licenses to use the software downloaded through our platform according to the original vendor's terms and applicable laws in their jurisdiction.</p> <!-- Updated Wording -->
+
+                <h3>3. User Conduct and Responsibilities</h3>
+                <p>You agree to use Someless services only for lawful purposes and in a manner consistent with the intended use of the software. You are prohibited from distributing materials that infringe on intellectual property rights. You must ensure that your use of downloaded software complies with the original software vendor's End User License Agreement (EULA).</p> <!-- Updated Wording -->
+
+                <h3>4. Software Disclaimer</h3>
+                <p>Someless provides access to software "as is". While we aim for reliable downloads, we do not guarantee that software is free of errors or completely secure, nor its suitability for specific purposes. The use of any software downloaded from Someless is at your own risk. Descriptions provided are for informational purposes and do not override original vendor licenses or terms.</p> <!-- Updated Wording -->
+
                 <h3>5. Intellectual Property</h3>
-                <p>All content, trademarks, and data on this website, including but not limited to, software, text, graphics, and icons, are the property of Someless and are protected by law. Unauthorized use is prohibited.</p>
-                
+                <p>The Someless website, including logos and design, is the property of Someless. The software listed belongs to respective owners. You are granted a limited license to access our site for personal, non-commercial use.</p> <!-- Shortened -->
+
                 <h3>6. Limitation of Liability</h3>
-                <p>Someless shall not be held liable for any damages resulting from the use or inability to use the services, including, but not limited to, incidental, consequential, or indirect damages.</p>
-                
-                <h3>7. Governing Law</h3>
-                <p>These terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Someless operates.</p>
-                
-                <h3>8. Dispute Resolution</h3>
-                <p>Any disputes arising out of or in connection with these terms shall be resolved through mediation in the first instance, failing which, the courts of the jurisdiction in which Someless operates shall have exclusive jurisdiction.</p>
+                <p>Someless shall not be liable for any damages arising from the use or inability to use our service or downloaded software. Use the service and software responsibly and at your own discretion.</p> <!-- Simplified -->
+
+                <h3>7. Modification of Terms</h3>
+                <p>We reserve the right to modify these Terms at any time. Changes are effective upon posting. Continued use signifies acceptance of the updated terms.</p> <!-- Simplified -->
+
+                <h3>8. Governing Law</h3>
+                <p>These terms are governed by the laws of Tanzania.</p> <!-- Simplified -->
+
             </section>
 
-            <section id="privacy" class="privacy-box">
+            <section id="privacy"> <!-- Removed class="privacy-box" -->
                 <h2>Privacy Policy</h2>
-                <p>Your privacy is important to us at Someless. This policy explains how we collect, use, and protect your personal information.</p>
-                
-                <h3>1. Information Collection</h3>
-                <p>We collect information that you provide directly to us, such as when you create an account, purchase software, or communicate with us. We also collect information automatically, such as your browsing behavior and device information.</p>
-                
-                <h3>2. Use of Information</h3>
-                <p>We use the information we collect to provide, maintain, and improve our services, to develop new services, and to protect Someless and our users. We also use the information to communicate with you, such as to send you updates and promotional offers.</p>
-                
-                <h3>3. Data Sharing</h3>
-                <p>We do not share your personal information with third parties except as necessary to provide our services or as required by law. We may share information with our affiliates and subsidiaries, and with vendors and service providers working on our behalf.</p>
-                
-                <h3>4. Data Protection</h3>
-                <p>We implement a variety of security measures to maintain the safety of your personal information. However, no method of transmission over the Internet, or method of electronic storage, is 100% secure, and we cannot guarantee its absolute security.</p>
-                
-                <h3>5. User Rights</h3>
-                <p>You have the right to access, correct, or delete your personal information, as well as the right to object to the processing of your data. To exercise these rights, please contact us at [Contact Information].</p>
-                
-                <h3>6. Cookies and Tracking</h3>
-                <p>We use cookies and similar technologies to enhance your experience on our website, to analyze usage patterns, and to deliver personalized content. You can control the use of cookies through your browser settings.</p>
-                
-                <h3>7. Changes to the Policy</h3>
-                <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on our website. You are advised to review this policy periodically for any changes.</p>
-                
-                <h3>8. Contact Information</h3>
-                <p>If you have any questions or concerns about this privacy policy, please contact us at [Contact Information].</p>
+                <p>Your privacy is important to us. This policy outlines how Someless handles your information.</p> <!-- Simplified -->
+
+                <h3>1. Information We Collect</h3>
+                <p>We may collect minimal non-personal data like IP address and browsing behavior via cookies for analytics. If you contact us via WhatsApp, we collect the info you provide (phone number, message content).</p> <!-- Simplified -->
+
+                <h3>2. How We Use Information</h3>
+                <p>Information is used to operate and improve the website, understand usage patterns, communicate with you (if contacted), and ensure security.</p> <!-- Simplified list -->
+
+                <h3>3. Cookies</h3> <!-- Simplified Heading -->
+                <p>We use cookies to store preferences and analyze site usage to optimize your experience. You can manage cookies via browser settings.</p> <!-- Simplified -->
+
+                <h3>4. Data Sharing</h3>
+                <p>We do not sell or rent personal information. Aggregated, non-identifiable data may be shared for analytics. Direct contact information is kept confidential unless required by law or for support.</p> <!-- Simplified -->
+
+                <h3>5. Data Security</h3>
+                <p>We implement reasonable security measures, but no internet transmission is 100% secure.</p> <!-- Simplified -->
+
+                <h3>6. Third-Party Links</h3>
+                <p>Our site may link to external sites (e.g., download hosts). We are not responsible for their privacy practices.</p> <!-- Simplified -->
+
+                <h3>7. Changes to This Policy</h3>
+                <p>We may update this policy. Check the "Last Updated" date. Continued use implies acceptance of changes.</p> <!-- Simplified -->
+
+                 <h3>8. Contacting Us</h3>
+                 <p>For questions about this Privacy Policy, contact us via the details in the Contact Us section below.</p>
+                 <p><em>Last Updated: July 25, 2024</em></p>
             </section>
 
-            <section id="contact" class="contact-box">
+            <section id="contact"> <!-- Removed class="contact-box" -->
                 <h2>Contact Us</h2>
-                <p>We are here to help! If you have any questions or need support, feel free to reach out to us via WhatsApp.</p>
+                <p>Need help or have questions? Reach out via WhatsApp for support:</p> <!-- Simplified -->
                 <p>
-                    <a href="https://wa.me/255620428389?text=Hello%20Someless%20I%20need%20your%20help%20from%20your%20website" target="_blank" class="whatsapp-button">+255620428389</a>
-                    <a href="https://wa.me/255674100576?text=Hello%20Someless%20I%20need%20your%20help%20from%20your%20website" target="_blank" class="whatsapp-button">+255674100576</a>
+                    <a href="https://wa.me/255620428389?text=Hello%20Someless%2C%20I%20need%20help%20from%20your%20website." target="_blank" class="whatsapp-button">+255 620 428 389</a>
+                    <a href="https://wa.me/255674100576?text=Hello%20Someless%2C%20I%20need%20help%20from%20your%20website." target="_blank" class="whatsapp-button">+255 674 100 576</a>
                 </p>
+                <p>We strive to respond promptly during business hours.</p>
             </section>
         </div>
     </main>
     <footer>
-        <p>&copy; 2024-2025 Someless. All rights reserved.</p>
-        <p>Trusted and Safe Downloads</p>
+        <p>© 2024-2025 Someless. All rights reserved.</p>
+        <p>Reliable Software Downloads</p>
         <p>
-            <a href="terms-and-privacy.html#terms">Terms of Service</a> | 
-            <a href="terms-and-privacy.html#privacy">Privacy Policy</a> | 
-            <a href="terms-and-privacy.html#contact">Contact Us</a>
+            <a href="#terms">Terms of Service</a> | <!-- Changed href to use ID directly -->
+            <a href="#privacy">Privacy Policy</a> | <!-- Changed href to use ID directly -->
+            <a href="#contact">Contact Us</a> <!-- Changed href to use ID directly -->
         </p>
         <p>
-            Have questions or need support? Reach out to us via WhatsApp!
-            <a href="https://wa.me/255620428389?text=Hello%20Someless%20I%20need%20your%20help%20from%20your%20website" target="_blank" class="whatsapp-button">+255620428389</a> |
+            Have questions or need support? Reach out via WhatsApp!
+            <a href="https://wa.me/255620428389?text=Hello%20Someless,%20I%20need%20help%20from%20your%20website." target="_blank" class="whatsapp-button">+255620428389</a>
         </p>
     </footer>
 </body>

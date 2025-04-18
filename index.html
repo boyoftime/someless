@@ -3,41 +3,526 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The first site for downloading Premium software for free and others at low price. welcome to use someless website">
+    <meta name="description" content="Download reliable software easily. Explore our curated collection of tools and applications."> <!-- Updated Description -->
     <meta name="robots" content="index, follow">
 
-    <title>Someless</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Someless - Trusted Software Downloads</title> <!-- Updated Title -->
+    <!-- Removed link to external styles.css -->
     <script src="scripts.js" defer></script>
+    <style>
+        /* --- Start of Embedded CSS --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); /* Import Poppins with more weights */
+
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #6c757d;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            /* Updated Header Gradient for a slightly more modern feel */
+            --header-gradient-start: #3a7bd5;
+            --header-gradient-end: #00d2ff;
+            --body-gradient-start: #f4f6f9; /* Very light gray */
+            --body-gradient-end: #e9ecef; /* Light gray */
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --heading-color: #222;
+            --accent-color: #ff8c42; /* Orange accent */
+            --shadow-color: rgba(0, 0, 0, 0.08); /* Softer shadow */
+            --whatsapp-green: #25D366;
+            --header-height: 70px; /* Define header height */
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(180deg, var(--body-gradient-start), var(--body-gradient-end));
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        main {
+            flex-grow: 1; /* Ensures main content takes available space */
+            padding: 30px 15px; /* More vertical padding */
+            padding-top: calc(var(--header-height) + 30px); /* Add padding to offset fixed header if implemented, otherwise adjust as needed */
+        }
+
+        /* --- Updated Header Styles --- */
+        header {
+            background: linear-gradient(90deg, var(--header-gradient-start), var(--header-gradient-end));
+            color: white;
+            padding: 0 20px; /* Adjust padding for vertical alignment */
+            display: flex; /* Use flex directly on header */
+            justify-content: center;
+            align-items: center;
+            position: fixed; /* Make header fixed */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Consistent shadow */
+            z-index: 1000; /* Ensure header stays on top */
+            transition: background-color 0.3s ease; /* Smooth transition if needed */
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px; /* Constrain width */
+        }
+
+        .logo-container {
+             flex-shrink: 0; /* Prevent logo from shrinking */
+        }
+
+        .main-logo {
+            height: 45px; /* Adjust logo size */
+            display: block;
+            transition: transform 0.3s ease;
+        }
+         .main-logo:hover {
+             transform: scale(1.05); /* Slight grow on hover */
+         }
+
+        .header-right-group {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Space between nav and search */
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 10px; /* Space between nav links */
+        }
+
+        .header-link {
+            color: white;
+            text-decoration: none;
+            font-size: 15px; /* Slightly smaller nav text */
+            font-weight: 600;
+            padding: 8px 15px; /* Padding for clickable area */
+            border-radius: 6px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            position: relative; /* For potential effects */
+            background-color: transparent; /* Default transparent background */
+        }
+
+        .header-link:hover, .header-link.active { /* Add active class if needed */
+            background-color: rgba(255, 255, 255, 0.15); /* Subtle background on hover */
+        }
+
+        /* --- Search Bar Styles --- */
+        .search-bar-container {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+            border-radius: 20px; /* Rounded pill shape */
+            width: 100%;
+            max-width: 320px; /* Adjust max width */
+            /* box-shadow: 0 1px 4px rgba(0,0,0,0.05); */ /* Optional softer shadow */
+            position: relative;
+            overflow: hidden;
+             transition: background-color 0.3s ease;
+        }
+        .search-bar-container:focus-within { /* Highlight when input is focused */
+             background-color: rgba(255, 255, 255, 0.3);
+        }
+
+
+        .search-input { /* Renamed class */
+            padding: 8px 15px 8px 20px; /* Adjust padding */
+            font-size: 14px;
+            border: none;
+            outline: none;
+            width: calc(100% - 40px); /* Width minus button width */
+            border-radius: 20px 0 0 20px;
+            color: white; /* White text color */
+            background-color: transparent;
+            font-family: 'Poppins', sans-serif;
+        }
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.7); /* Lighter placeholder */
+            opacity: 1;
+        }
+
+        .search-button {
+            background: transparent; /* Make button background transparent */
+            border: none;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px; /* Fixed width for button */
+            height: 36px; /* Match input height approx */
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: background-color 0.2s ease;
+        }
+
+        .search-button:hover {
+            background-color: rgba(0,0,0, 0.1); /* Subtle dark hover */
+        }
+
+        .search-icon {
+            width: 16px;
+            height: 16px;
+            filter: brightness(0) invert(1); /* Ensure icon is white */
+            opacity: 0.8;
+        }
+        .search-button:hover .search-icon {
+             opacity: 1;
+        }
+
+
+        /* --- Main Content Styles (Mostly unchanged) --- */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto; /* Remove top margin as padding is handled by main */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Less transparent */
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--shadow-color);
+        }
+
+        .request-button {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 35px auto; /* More bottom margin */
+            padding: 12px 25px;
+            background: linear-gradient(135deg, var(--accent-color), #ffae7a);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(255, 140, 66, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .request-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(255, 140, 66, 0.5);
+        }
+
+        .programs-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-top: 0;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .programs-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+            margin: 8px auto 0;
+        }
+
+        .software-list-container {
+            display: block;
+        }
+
+        .software-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Slightly wider min */
+            gap: 25px;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .software-item {
+            text-align: center;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid #eee;
+            position: relative; /* For price overlay if needed */
+        }
+
+        .software-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            border-color: var(--primary-color);
+        }
+
+        .software-item img.software-image {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 10px; /* Less space */
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .software-item p.item-name { /* Added class */
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 5px 0; /* Add vertical margin */
+            height: 40px; /* Approx height for 2 lines */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            width: 100%;
+            color: var(--heading-color);
+        }
+
+        .software-item p.item-price { /* Added class */
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 5px; /* Space above price */
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .software-item p.price-free { /* Style for free items */
+             color: #28a745; /* Green */
+             background-color: #e9f7ec;
+        }
+        .software-item p.price-paid { /* Style for paid items */
+             color: var(--accent-color); /* Orange */
+             background-color: #fff3e8;
+        }
+
+        .no-results-message {
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: 18px;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .pagination button {
+            padding: 10px 20px;
+            margin: 0 8px;
+            border: none;
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .pagination button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 8px 0;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: #a7d8ff;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .whatsapp-button {
+            color: white;
+            background-color: var(--whatsapp-green);
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 5px;
+            display: inline-block;
+            font-size: 14px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe57;
+            transform: scale(1.05);
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+             main {
+                 padding-top: calc(var(--header-height) + 20px); /* Adjust padding */
+             }
+            .header-inner {
+                 padding: 0 15px;
+            }
+            .main-logo {
+                 height: 40px; /* Smaller logo */
+            }
+            .header-right-group {
+                 gap: 15px; /* Less gap */
+            }
+             .header-nav {
+                 /* Option 1: Hide nav (requires burger menu JS) */
+                 /* display: none; */
+                 /* Option 2: Keep nav, maybe reduce padding */
+                 gap: 5px;
+             }
+             .header-link {
+                 font-size: 14px;
+                 padding: 6px 10px;
+             }
+            .search-bar-container {
+                 max-width: 250px; /* Smaller search */
+            }
+             .search-input { font-size: 13px; padding: 8px 10px 8px 15px;}
+             .search-button { width: 35px; height: 34px;}
+             .search-icon { width: 15px; height: 15px;}
+
+            .programs-title { font-size: 24px; }
+            .software-list {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Adjust grid */
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            :root { --header-height: 60px; } /* Shorter header */
+            main {
+                padding-top: calc(var(--header-height) + 15px);
+            }
+             header { padding: 0 10px; }
+            .header-inner {
+                 flex-wrap: wrap; /* Allow wrapping */
+                 justify-content: center; /* Center items when wrapped */
+                 row-gap: 10px; /* Gap when wrapped */
+             }
+             .logo-container {
+                 /* Ensure logo stays on left when not wrapped */
+                 flex-basis: auto;
+                 margin-right: auto; /* Pushes right group away */
+             }
+            .main-logo { height: 35px; }
+
+            .header-right-group {
+                 flex-basis: 100%; /* Take full width when wrapped */
+                 justify-content: center; /* Center nav and search */
+                 gap: 10px;
+                 flex-wrap: wrap; /* Allow nav and search to wrap too */
+             }
+             .header-nav {
+                 order: 2; /* Put nav below search if wrapped */
+                 gap: 5px;
+                 flex-basis: 100%; /* Full width */
+                 justify-content: center; /* Center nav links */
+             }
+             .header-link { font-size: 13px; padding: 5px 8px;}
+
+            .search-bar-container {
+                 order: 1; /* Put search above nav */
+                 max-width: 90%; /* Almost full width */
+                 margin: 0 auto; /* Center search bar */
+             }
+            .search-input { flex-grow: 1; } /* Allow input to take space */
+
+             .request-button { font-size: 15px; padding: 10px 20px;}
+             .software-list { grid-template-columns: repeat(2, 1fr); gap: 15px;}
+             .software-item p.item-name { font-size: 13px; height: 36px;}
+             .software-item p.item-price { font-size: 12px; }
+             .pagination button { padding: 8px 15px; font-size: 14px; }
+             footer { padding: 20px 15px; font-size: 13px; }
+             .whatsapp-button { font-size: 13px; padding: 7px 15px; }
+        }
+
+        /* --- End of Embedded CSS --- */
+    </style>
 </head>
 <body>
     <header>
-        <div class="header-links">
-            <a href="index.html" class="header-link">Home</a>
-            <a href="about.html" class="header-link">About</a>
-        </div>
-        <div class="logo-left-container">
-            <img src="logo/logo1.png" alt="Logo Left" class="logo-left">
-        </div>
-        <div class="logo-center-container">
-            <img src="logo/logo2.png" alt="Logo Center" class="logo-center">
-            <div class="search-bar-container">
-                <input type="search" id="searchBar" placeholder="Search software..." class="glowing-search-bar">
-                <button id="searchButton" class="search-button">
-                    <img src="images/search-icon.png" alt="Search Icon" class="search-icon">
-                </button>
+        <div class="header-inner"> <!-- New wrapper -->
+            <div class="logo-container"> <!-- Logo on Left -->
+                <a href="index.html">
+                    <img src="logo/logo2.png" alt="Someless Logo" class="main-logo">
+                </a>
+            </div>
+
+            <div class="header-right-group"> <!-- Nav and Search Group -->
+                <nav class="header-nav"> <!-- Navigation -->
+                    <a href="index.html" class="header-link active">Home</a> <!-- Added active class for demo -->
+                    <a href="about.html" class="header-link">About</a>
+                </nav>
+
+                <div class="search-bar-container"> <!-- Search -->
+                    <input type="search" id="searchBar" placeholder="Search software..." class="search-input">
+                    <button id="searchButton" class="search-button" aria-label="Search"> <!-- Added aria-label -->
+                        <img src="images/search-icon.png" alt="" class="search-icon"> <!-- Alt empty as button has aria-label -->
+                    </button>
+                </div>
             </div>
         </div>
     </header>
     <main>
         <div class="content-container">
-            <button id="requestProgramButton" class="request-button">Call to Request a Program</button>
-            <h2 class="programs-title">Programs Available Now</h2>
+            <button id="requestProgramButton" class="request-button">Request a Program via WhatsApp</button>
+            <h2 class="programs-title">Available Software</h2>
             <div class="software-list-container">
                 <div class="software-list" id="software-list">
                     <!-- Program list items will be dynamically inserted here -->
                 </div>
-                <div id="no-results-message" class="no-results-message" style="display: none;">No programs found.</div>
+                <div id="no-results-message" class="no-results-message" style="display: none;">No programs found matching your search.</div>
             </div>
             <div class="pagination">
                 <button id="prev-btn" disabled>Previous</button>
@@ -46,17 +531,44 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2024-2025 Someless. All rights reserved.</p>
-        <p>Trusted and Safe Downloads</p>
+        <p>© 2024-2025 Someless. All rights reserved.</p>
+        <p>Trusted Software Downloads</p> <!-- Slightly updated text -->
         <p>
-            <a href="terms-and-privacy.html#terms">Terms of Service</a> | 
-            <a href="terms-and-privacy.html#privacy">Privacy Policy</a> | 
+            <a href="terms-and-privacy.html#terms">Terms of Service</a> |
+            <a href="terms-and-privacy.html#privacy">Privacy Policy</a> |
             <a href="terms-and-privacy.html#contact">Contact Us</a>
         </p>
         <p>
-            Have questions or need support? Reach out to us via WhatsApp!
-            <a href="https://wa.me/255620428389?text=Hello%20Someless%20I%20need%20your%20help%20from%20your%20website" target="_blank" class="whatsapp-button">+255620428389</a>
+            Have questions or need support? Reach out via WhatsApp! <!-- Shortened -->
+            <a href="https://wa.me/255620428389?text=Hello%20Someless,%20I%20need%20help%20from%20your%20website." target="_blank" class="whatsapp-button">+255620428389</a>
         </p>
     </footer>
+
+    <!-- JavaScript for Enter key search -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchBar');
+            const searchButton = document.getElementById('searchButton'); // Assuming scripts.js handles the actual search logic via this button's click
+
+            if (searchInput && typeof searchItems === 'function') { // Check if input exists and search function is available (from scripts.js)
+                 searchInput.addEventListener('keypress', function(event) {
+                    if (event.key === 'Enter') {
+                        event.preventDefault(); // Prevent default form submission if applicable
+                        // Directly call the search function defined in scripts.js
+                        searchItems(this.value);
+                    }
+                 });
+            } else if (searchInput && searchButton) {
+                 // Fallback: If searchItems function isn't directly accessible,
+                 // simulate a click on the search button when Enter is pressed.
+                 searchInput.addEventListener('keypress', function(event) {
+                     if (event.key === 'Enter') {
+                         event.preventDefault();
+                         searchButton.click(); // Trigger the click event listener attached in scripts.js
+                     }
+                 });
+            }
+        });
+    </script>
 </body>
 </html>

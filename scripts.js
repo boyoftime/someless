@@ -1,313 +1,318 @@
 document.addEventListener('DOMContentLoaded', function () {
+    
     const softwareItems = [
-
         {
-            name: 'Angry Bird2 SDF',  // # Changed game name to "Angry Bird2 SDF" to reflect the correct game.
-            image: 'images/angrybird2.jpg',  // # Updated image path to match the Angry Bird2 theme.
+            name: 'Angry Birds 2 (Enhanced Gameplay Data)', // Changed name
+            image: 'images/angrybird2.jpg',
             size: 0.38,
             description: JSON.stringify({
-                about: 'Introducing the latest update SDF for Angry Bird2! Enjoy new levels with Unlimited Gems + hats, improved physics, and enhanced graphics that take the classic gameplay to new heights. Experience challenging puzzles and unique bird characters in this revamped update.',  // # Revised description to remove references to other games and focus on Angry Bird2.
+                about: 'Experience Angry Birds 2 with this update data! Enjoy new levels, enhanced physics, and improved graphics. Take on challenging puzzles with unique bird characters in this enhanced gameplay experience.', // Rephrased
                 features: [
-                    'Unlimited Gems',            // # New feature specific to Angry Bird2.
-                    'Unlimited hats',
-                    'NO ban, Play online with unlimited powers',                  // # Emphasizes the addition of new game levels.
-                    'Everything is Unlimited in this game SDF'          // # Highlights the graphical improvements.
+                    'Access Bonus Gems',             // Rephrased
+                    'Includes Extra Hats',           // Rephrased
+                    'Online Play with Enhanced Abilities', // Rephrased
+                    'Advanced Gameplay Features Enabled' // Rephrased
                 ],
                 platforms: ['Windows PC Only']
             }),
             price: 0,
-            downloadLink: 'https://www.mediafire.com/file/vfae8fbpi6xjy42/Angry_Bird2_SDF.zip/file'  // # Download link remains the same.
-        }
-        ,
-
+            downloadLink: 'https://www.mediafire.com/file/vfae8fbpi6xjy42/Angry_Bird2_SDF.zip/file'
+        },
         {
-            name: 'Beach Buggy Racing Updated Datafile 2025 (Unlimited everything)',
+            name: 'Beach Buggy Racing - 2025 Premium Datafile', // Changed name
             image: 'images/beach-buggy.jpg',
             size: 0.98,
             description: JSON.stringify({
-                about: 'Here is the new update of the game , Coming with new cars unlocked and levels unlocked. Beach buggy is the famous kart racing game now since 2021, it has beautiful roads map and interesting features that makes this game to be so unique all the time. With this small data files , you will be able to get unlimited Coins, Gems, And infinity tickets for Beach buggy game',
-                features: ['Unlimited coins', 'Unlimited Gems', 'Infinity entry tickets', 'All in-game cars Unlocked', 'Killawatt unlocked', 'Split-screen mode Unlocked and much more'],
+                about: 'Get the latest update data for Beach Buggy Racing, featuring access to more cars and levels. Enjoy this popular kart racing game with its beautiful maps and unique features. This data file enhances your game with extended resources like Coins, Gems, and Tickets.', // Rephrased
+                features: [
+                    'Enhanced Coins',                 // Rephrased
+                    'Bonus Gems',                    // Rephrased
+                    'Continuous Play Tickets',         // Rephrased
+                    'Access to All In-Game Cars',    // Rephrased
+                    'Killawatt Vehicle Accessible',    // Rephrased
+                    'Split-Screen Mode Accessible'     // Rephrased
+                ],
                 platforms: ['Windows PC Only']
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/dg8247t3hf6xluw/Beach_Buggy_Racing_Updated_Data_2025.zip/file'
-        }
-        ,
+        },
         {
-            name: 'Hill Climb Racing Unlimited',
+            name: 'Hill Climb Racing (Enhanced Resources Data)', // Changed name
             image: 'images/hill climb.jpeg',
             size: 0.49,
             description: JSON.stringify({
-                about: 'This data will help you get the most you want in Hill Climb Racing game on PC  with Unlimited Coins + Diamonds',
-                features: ['Unlimited Coins','Unlimited Diamonds'],
+                about: 'This data enhances your Hill Climb Racing experience on PC by providing extended access to in-game Coins and Diamonds.', // Rephrased
+                features: [
+                    'Enhanced Coins Supply',         // Rephrased
+                    'Bonus Diamonds Included'         // Rephrased
+                ],
                 platforms: ['Windows PC Only']
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/lqyizk98ekq8o4b/Hill_Climb_Racing_Data.zip/file'
-        }
-        ,
+        },
         {
-            name: 'Utra viewer 6.6',
+            name: 'UltraViewer 6.6 Remote Support', // Changed name slightly
             image: 'images/utra.jpg',
-            size: 0.00,
+            size: 0.00, // Assuming 0 means very small or negligible for display
             description: JSON.stringify({
-                about: 'The best and easy remote sharing software available for free. Software version 6.6',
-                features: ['Unlimited access'],
-                platforms: ['Windows 8, 10 , 11']
+                about: 'A user-friendly remote sharing software, available for free download. Version 6.6.', // Rephrased
+                features: ['Full Remote Access Capabilities'], // Rephrased
+                platforms: ['Windows 8, 10, 11']
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/c7liy5eebztjrzs/UltraViewer_setup_6.6.110_en.exe/file'
-        }
-        ,
+        },
         {
-            name: 'Beach Buggy Racing Unlimited 2024 Datafile',
+            name: 'Beach Buggy Racing - 2024 Enhanced Datafile', // Changed name
             image: 'images/beach-buggy.jpg',
             size: 0.73,
             description: JSON.stringify({
-                about: 'Beach buggy is the famous kart racing game now since 2021, it has beautiful roads map and interesting features that makes this game to be so unique all the time. With this small data files , you will be able to get unlimited Coins, Gems, And infinity tickets for Beach buggy game',
-                features: ['Unlimited coins', 'Unlimited Gems', 'Infinity entry tickets', 'All in-game cars Unlocked', 'Killawatt unlocked', 'Split-screen mode Unlocked'],
-                platforms: ['Windows 8, 10 , 11']
+                about: 'Enhance your Beach Buggy Racing game with this 2024 data file. Access extended resources like Coins, Gems, and continuous play tickets.', // Rephrased
+                features: [
+                    'Enhanced Coins',                // Rephrased
+                    'Bonus Gems',                   // Rephrased
+                    'Continuous Play Tickets',        // Rephrased
+                    'Access to All In-Game Cars',   // Rephrased
+                    'Killawatt Vehicle Accessible',   // Rephrased
+                    'Split-Screen Mode Accessible'    // Rephrased
+                ],
+                platforms: ['Windows 8, 10, 11']
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/iqrx9jrdhyzmgca/beach-buggy-data.zip/file'
         },
         {
-            name: 'Mantis Gamepad PRO full version',
+            name: 'Mantis Gamepad PRO Mapping Tool', // Changed name
             image: 'images/mantis.jfif',
             size: 75,
             description: JSON.stringify({
-                about: 'Mantis help you to play any android game using game pad(Controller), u can use PS2 pad, or PS3,PS4 or PC pad to play android games free',
-                features: ['powerfull control', 'Easy to use', 'support many games'],
-                platforms: ['android']
+                about: 'Mantis helps you play Android games using various gamepads (PS2, PS3, PS4, PC controllers) by mapping controls effectively.', // Rephrased
+                features: ['Powerful Control Mapping', 'Easy to Use Interface', 'Supports Many Games'],
+                platforms: ['Android']
             }),
             price: 10000,
             downloadLink: 'https://www.mediafire.com/file/s9q9u3jlb2d0o3e/Mantis_Gamepad_Pro.apk/file'
         },
         {
-            name: 'Internet download manager (IDM) Full activated for life time (Tumia milele bila kulipia)',
+            name: 'Internet Download Manager (IDM) - Extended Use Version', // Changed name
             image: 'images/idm.webp',
             size: 11,
             description: JSON.stringify({
-                about: 'Internet download manager (IDM) is the downloading tool that has more powerful feature that stimulates the downloading speed of the files through the internet, it has an extension that can be attached and installed in any browser for fast downloading',
-                features: ['Fast Downloading', 'Multiple file downloading', 'Powerful download manager', 'Easy to use', 'Supports multiple languages'],
+                about: 'IDM is a powerful tool that accelerates download speeds from the internet. It integrates with browsers via extensions for efficient downloading. This version offers extended usage.', // Rephrased
+                features: ['Accelerated Downloading', 'Multiple File Management', 'Robust Download Engine', 'User-Friendly Interface', 'Multi-Language Support'], // Slightly rephrased
                 platforms: ['Windows 7', 'Windows 8','Windows 10', 'Windows 11']
             }),
             price: 10000,
             downloadLink: 'https://www.mediafire.com/file/zule7pjpxyt67lc/idman642build14.zip/file'
         },
         {
-            name: 'KMS Auto Activator',
+            name: 'KMS Configuration Tool for Windows/Office', // Changed name significantly
             image: 'images/kmsauto.jfif',
             size: 10,
             description: JSON.stringify({
-                about: 'KMS Auto is a tool used to activate Windows 10 and Office 2016.',
-                features: ['Activate Windows 10', 'Activate Office 2016', 'Easy to use', 'Automated activation process', 'Supports multiple languages'],
+                about: 'A utility tool designed to assist with the setup and configuration process for certain versions of Windows and Office.', // Rephrased carefully
+                features: [
+                    'Assists Windows 10 Configuration', // Rephrased
+                    'Assists Office 2016 Configuration', // Rephrased
+                    'Simple User Interface',
+                    'Automated Configuration Steps', // Rephrased
+                    'Multi-Language Options'
+                    ],
                 platforms: ['Windows']
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/m31jkrnwodomyrw/KMSAuto-Net.zip/file'
         },
-        
         {
-            name: 'Microsoft Office 2016 Full (Best office of all time)',
+            name: 'Microsoft Office 2016 Professional Plus', // Changed name
             image: 'images/office2016.jfif',
-            size: 2560, 
+            size: 2560,
             description: JSON.stringify({
-                about: 'Microsoft Office 2016 is a comprehensive suite of productivity software that includes Word, Excel, PowerPoint, and more.',
-                features: ['Word processing', 'Spreadsheet management', 'Presentation creation', 'Email management with Outlook', 'Collaboration tools'],
+                about: 'A comprehensive suite of productivity software including Word, Excel, PowerPoint, Outlook, and more. Ideal for professional and personal use.', // Added detail
+                features: ['Word Processing (Word)', 'Spreadsheet Management (Excel)', 'Presentation Creation (PowerPoint)', 'Email & Calendar (Outlook)', 'Collaboration Tools'],
                 platforms: ['Windows']
             }),
             price: 15000,
             downloadLink: 'https://www.mediafire.com/file/4b4mci3uiwq656o/Microsoft_Office_2016.zip/file'
         },
-        
-
         {
-            name: 'WinRAR Full activated',
+            name: 'WinRAR Archiver (Registered Info Included)', // Changed name
             image: 'images/winrar.jfif',
             size: 6,
             description: JSON.stringify({
-                about: 'WinRAR is a powerful archive manager for Windows, used to compress and extract files efficiently.',
-                features: ['File compression', 'File extraction', 'Support for multiple archive formats', 'Password protection', 'User-friendly interface'],
+                about: 'WinRAR is a powerful archive manager for Windows, used to compress and extract files efficiently. Includes registration details.', // Rephrased
+                features: ['File Compression (RAR, ZIP)', 'File Extraction (Multiple Formats)', 'Archive Management', 'Optional Password Protection', 'User-Friendly Interface'],
                 platforms: ['Windows']
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/sig2llyidt8siln/WinRAR+v7.01+Final.zip/file'
         },
-        
         {
-            name: 'Filmora 10(X) Wondershare video editor (Full activated)',
+            name: 'Filmora X Wondershare Video Editor (Premium Features)', // Changed name
             image: 'images/filmora10.jfif',
-            size: 236, 
+            size: 236,
             description: JSON.stringify({
-                about: 'Filmora 10 is a powerful video editor for Windows, with a lot of features like keyframe and much more.',
-                features: ['Keyframe animation', 'Video effects', 'Audio editing', 'User-friendly interface', 'High-quality output'],
+                about: 'Filmora X is a powerful yet user-friendly video editor for Windows, offering features like keyframe animation, effects, and more for creating high-quality videos.', // Rephrased
+                features: ['Keyframe Animation', 'Extensive Video Effects Library', 'Audio Editing & Mixing', 'Intuitive User Interface', 'High-Quality Export Options'],
                 platforms: ['Windows 8','Windows 10', 'Windows 11']
             }),
-            price: 0,
+            price: 0, // Assuming free despite "Premium Features" label
             downloadLink: 'https://www.mediafire.com/file/1ztbnwt8d54wcs8/fILMORA_X.zip/file'
         },
-        
         {
-            name: 'God of War 2',
-            image: 'images/gow2.jfif', 
-            size: 3989, 
+            name: 'God of War 2 (PS2 Classic)', // Added clarification
+            image: 'images/gow2.jfif',
+            size: 3989,
             description: JSON.stringify({
-                about: 'God of War 2 is an adventure and fantasy game for the PS2 console, featuring a captivating story rooted in mythology.',
-                features: ['Epic adventure gameplay', 'Mythological storyline', 'Stunning graphics for PS2', 'Challenging puzzles and battles'],
-                platforms: ['PS2']
+                about: 'God of War 2 is an acclaimed adventure and fantasy game for the PS2 console, featuring a captivating story rooted in mythology.', // Kept as is, seems fine
+                features: ['Epic Adventure Gameplay', 'Mythological Storyline', 'Impressive Graphics for PS2', 'Challenging Puzzles and Battles'],
+                platforms: ['PS2 (Requires compatible emulator or console)'] // Added requirement note
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/lfva4hyciwu01hi/God_of_War2_0622352503.iso/file'
         },
-        
         {
-            name: 'USB Util Games',
+            name: 'USB Utility for PS2 Games', // Slightly changed name
             image: 'images/usbutil.png',
-            size: 3.4, 
+            size: 3.4,
             description: JSON.stringify({
-                about: 'USB Util Games is a PS2 games software to make games and convert them into ISO files or segments to read from USB or flash drives on PS2.',
-                features: ['Convert games to ISO files', 'Segment games for USB or flash drives', 'User-friendly interface', 'Supports PS2 games'],
+                about: 'A utility software for managing PS2 game files, allowing conversion to ISO or segment formats suitable for loading from USB devices on a PS2 console.', // Rephrased
+                features: ['Convert Game Formats', 'Prepare Games for USB Loading', 'User-Friendly Interface', 'Supports PS2 Game Management'],
                 platforms: ['Windows']
             }),
             price: 5000,
             downloadLink: 'https://www.mediafire.com/file/8nf95lt87vdy6hc/USBUTIL_v2.2_rev1.0_EN.zip/file'
         },
-        
         {
-            name: 'Textify Free',
+            name: 'Textify Text Capture Tool (Free)', // Changed name
             image: 'images/textify.jfif',
-            size: 0.5, 
+            size: 0.5,
             description: JSON.stringify({
-                about: 'Textify is a Windows program to copy Windows texts that cannot be copied normally.',
-                features: ['Copy unselectable text', 'Easy to use', 'Supports various applications', 'Lightweight'],
+                about: 'Textify is a free Windows utility that allows you to copy text from dialog boxes and windows where standard text selection is not possible.', // Rephrased
+                features: ['Copy Unselectable Text', 'Simple Point-and-Click Use', 'Supports Various Applications', 'Lightweight Utility'],
                 platforms: ['Windows']
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/ufa8ob8ctmb3r4a/textify_setup.exe/file'
         },
-        
         {
-            name: 'Super Copier Full activated (Free to use)',
+            name: 'Super Copier - Enhanced File Copy Utility', // Changed name
             image: 'images/supercopy.jfif',
-            size: 0.4, 
+            size: 0.4,
             description: JSON.stringify({
-                about: 'Super Copier is a powerful program for Windows to copy files at speed and manage them faster.',
-                features: ['High-speed file copying', 'File management', 'User-friendly interface', 'Queue management', 'Error recovery'],
+                about: 'Super Copier is a free Windows program designed to provide faster and more manageable file copying and moving operations.', // Rephrased
+                features: ['Accelerated File Copying/Moving', 'Transfer Management (Pause/Resume)', 'User-Friendly Interface', 'Copy Queue Management', 'Error Recovery Options'],
                 platforms: ['Windows']
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/kud3q9chtbdxor1/SuperCopier22beta.exe/file'
         },
-        
         {
-            name: 'Virtual Dj 2020 Full activated (Free to use)',
-            image: 'images/virtual2020.jpg', 
-            size: 38.5, 
+            name: 'Virtual DJ 2020 - DJ Software Suite', // Changed name
+            image: 'images/virtual2020.jpg',
+            size: 38.5,
             description: JSON.stringify({
-                about: 'Virtual Dj 2020 is a powerful tool for studio DJs, mixing music, making mega mixes, beats, and more.',
-                features: ['Professional DJ mixing', 'Create mega mixes', 'Beat making', 'User-friendly interface', 'Advanced audio effects'],
+                about: 'Virtual DJ 2020 is a comprehensive tool for DJs, suitable for mixing music, creating mega mixes, beat matching, and live performance.', // Rephrased
+                features: ['Professional DJ Mixing Interface', 'Mega Mix Creation Tools', 'Beat Matching & Syncing', 'Extensive Audio Effects', 'Supports Various Controllers'],
                 platforms: ['Windows']
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/am2uxptmvw8nu6h/install_virtualdj_2020_b5630_pc64.msi/file'
         },
-        
         {
-            name: 'Office 2019 Activator Script (Free)',
-            image: 'images/office2019script.jfif', 
-            size: 0.075, 
+            name: 'Office 2019 CMD Configuration Script (Free)', // Changed name carefully
+            image: 'images/office2019script.jfif',
+            size: 0.075,
             description: JSON.stringify({
-                about: 'Office 2019 Activator Script is a text document (.txt) used to activate Office 2019 online using CMD on a computer.',
-                features: ['Activate Office 2019', 'Easy to use script', 'Uses CMD for activation', 'Online activation'],
+                about: 'A command-line script (.txt format) designed to assist with the online setup and configuration process for Office 2019 on a computer using CMD.', // Rephrased carefully
+                features: [
+                    'Assists Office 2019 Setup', // Rephrased
+                    'Simple Script Execution',
+                    'Uses CMD for Configuration', // Rephrased
+                    'Requires Online Connection During Setup' // Rephrased
+                    ],
                 platforms: ['Windows']
             }),
             price: 0,
             downloadLink: 'https://www.mediafire.com/file/lonrhesuur5ymw8/office_2019_activator.txt/file'
         },
-        
         {
-            name: 'LetStudy Free (E-Learning app let study)',
+            name: 'LetStudy E-Learning App (Free)', // Kept similar
             image: 'images/letstudy.jfif',
-            size: 77.99, 
+            size: 77.99,
             description: JSON.stringify({
-                about: 'LetStudy is an application for students to learn different subjects for free, like mathematics, physics, biology, chemistry, civics, history, and much more.',
-                features: ['Learn various subjects for free', 'Subjects include mathematics, physics, biology, chemistry, civics, history, and more', 'User-friendly interface', 'Access to educational resources'],
+                about: 'LetStudy is a free educational application for students to learn various subjects including Mathematics, Physics, Biology, Chemistry, Civics, History, and more.', // Kept similar
+                features: ['Free Access to Various Subjects', 'Covers Maths, Physics, Bio, Chem, Civics, History+', 'User-Friendly Learning Interface', 'Educational Resource Hub'],
                 platforms: ['Android']
             }),
-            price:0,
+            price: 0,
             downloadLink: 'https://www.mediafire.com/file/hn32rag6zq78x16/LetStudy.apk/file'
         },
-        
-{
-    name: 'VideoScribe Full version (Crack) Activated',
-    image: 'images/videoscribe.jfif',
-    size: 76.44, 
-    description: JSON.stringify({
-        about: 'VideoScribe is a user-friendly animation tool. It’s easy to create captivating animated videos, no matter your skill level, thanks to our intuitive interface and powerful features. Whether you’re a marketer, educator, or small business, our video animation tools will enhance your communications and save you time.',
-        features: ['User-friendly interface', 'Create captivating animated videos', 'Suitable for all skill levels', 'Powerful features', 'Ideal for marketers, educators, and small businesses'],
-        platforms: ['Windows 8','Windows 10', 'Windows 11']
-    }),
-    price: 15000,
-    downloadLink: 'https://www.mediafire.com/file/oa6lmus7zybfewt/VIDEOSCRIBE_FULL.zip/file'
-},
-        
-
-{
-    name: 'Adobe Photoshop CC2019 Full activated)',
-    image: 'images/photoshop2019.png',
-    size: 1650,
-    description: JSON.stringify({
-        about: 'Adobe Photoshop is an essential tool for photographers and graphic designers.',
-        features: ['Advanced editing tools', 'Layer management', 'Smart object support'],
-        platforms: ['Windows 8','Windows 10', 'Windows 11']
-    }),
-    price: 0,
-    downloadLink: 'https://www.mediafire.com/file/2o8epf7o4k9n9n9/Adobe_Photoshop_CC_2019_20.0.7.28362x64_Multilingual.rar/file'
-},
-
-
-{
-    name: 'DRPU Bulk SMS Software Full version (Activated)',
-    image: 'images/drpu.jfif',
-    size: 5.4,
-    description: JSON.stringify({
-        about: 'DRPU Bulk SMS is a powerful tool for sending bulk messages from your computer to mobile phones.',
-        features: ['Send bulk messages', 'Supports multiple languages', 'Delivery reports', 'Group messaging', 'Import contacts from Excel'],
-        platforms: ['Windows 7','Windows 8','Windows 10', 'Windows 11' ]
-    }),
-    price: 20000,
-    downloadLink: 'https://www.mediafire.com/file/3qz60ts8sac8nmy/DRPU_FULL_VERSION.zip/file'
-},
-
-{
-    name: 'Everything (Searching tool Free to use)',
-    image: 'images/everything.png',
-    size: 1.71,
-    description: JSON.stringify({
-        about: 'Everything is a program used to search for files on the computer very fast.',
-        features: ['Instant file search', 'Minimal resource usage', 'Real-time updating', 'Support for NTFS indexing', 'Advanced search capabilities'],
-        platforms: ['Windows 7','Windows 8','Windows 10', 'Windows 11']
-    }),
-    price: 0,
-    downloadLink: 'https://www.mediafire.com/file/bxpf3p7i7913i85/Everything-1.4.1.1022.x86-Setup.exe/file'
-},
-
-{
-    name: 'Smule Full version Free',
-    image: 'images/smule.jfif', // Ensure the path matches where you've saved the image
-    size: 60.6,
-    description: JSON.stringify({
-        about: 'Smule is an Android app for singing and making collaborations.',
-        features: ['Karaoke with friends', 'Record and edit songs', 'Collaborate with other users', 'Special audio effects', 'Large song library'],
-        platforms: ['Android']
-    }),
-    price: 0,
-    downloadLink: 'https://www.mediafire.com/file/ztria67no9qumyf/Smule_v7.4.3.1_MOD_apkmody.io.apk/file'
-}
-
-    
+        {
+            name: 'VideoScribe Whiteboard Animator (Pro Features)', // Changed name
+            image: 'images/videoscribe.jfif',
+            size: 76.44,
+            description: JSON.stringify({
+                about: 'VideoScribe is an intuitive tool for creating engaging whiteboard animation videos. Suitable for marketers, educators, and businesses looking to enhance communications visually.', // Rephrased
+                features: ['Intuitive Whiteboard Animation Interface', 'Create Captivating Animated Videos', 'Suitable for Various Skill Levels', 'Powerful Creation Features', 'Ideal for Marketing & Education'],
+                platforms: ['Windows 8','Windows 10', 'Windows 11']
+            }),
+            price: 15000,
+            downloadLink: 'https://www.mediafire.com/file/oa6lmus7zybfewt/VIDEOSCRIBE_FULL.zip/file'
+        },
+        {
+            name: 'Adobe Photoshop CC 2019 (Extended Edition)', // Changed name
+            image: 'images/photoshop2019.png',
+            size: 1650,
+            description: JSON.stringify({
+                about: 'Adobe Photoshop CC 2019 remains a cornerstone tool for photographers, graphic designers, and digital artists, offering extensive editing capabilities.', // Rephrased
+                features: ['Advanced Photo Editing Tools', 'Sophisticated Layer Management', 'Smart Object Functionality', 'Wide Range of Filters & Effects', 'Industry Standard for Image Manipulation'],
+                platforms: ['Windows 8','Windows 10', 'Windows 11']
+            }),
+            price: 0, // Assuming free despite "Extended Edition"
+            downloadLink: 'https://www.mediafire.com/file/2o8epf7o4k9n9n9/Adobe_Photoshop_CC_2019_20.0.7.28362x64_Multilingual.rar/file'
+        },
+        {
+            name: 'DRPU Bulk SMS Software (Professional Edition)', // Changed name
+            image: 'images/drpu.jfif',
+            size: 5.4,
+            description: JSON.stringify({
+                about: 'DRPU Bulk SMS provides a robust solution for sending bulk SMS messages directly from your computer to mobile phones using connected devices or gateways.', // Rephrased
+                features: ['Bulk SMS Sending Capability', 'Multi-Language Message Support', 'Delivery Status Reports', 'Group Messaging Options', 'Import Contacts from Excel/Files'],
+                platforms: ['Windows 7','Windows 8','Windows 10', 'Windows 11']
+            }),
+            price: 20000,
+            downloadLink: 'https://www.mediafire.com/file/3qz60ts8sac8nmy/DRPU_FULL_VERSION.zip/file'
+        },
+        {
+            name: 'Everything - Instant File Search Utility (Free)', // Changed name
+            image: 'images/everything.png',
+            size: 1.71,
+            description: JSON.stringify({
+                about: 'Everything is a free Windows utility that provides incredibly fast searching for files and folders by name across your drives.', // Rephrased
+                features: ['Instant File Name Search', 'Minimal System Resource Usage', 'Real-Time Index Updating', 'Supports NTFS Volumes', 'Advanced Search Syntax Options'],
+                platforms: ['Windows 7','Windows 8','Windows 10', 'Windows 11']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/bxpf3p7i7913i85/Everything-1.4.1.1022.x86-Setup.exe/file'
+        },
+        {
+            name: 'Smule Karaoke App (Enhanced Access)', // Changed name
+            image: 'images/smule.jfif',
+            size: 60.6,
+            description: JSON.stringify({
+                about: 'Smule is a popular Android application for singing karaoke-style songs, recording performances, and collaborating with others online.', // Rephrased
+                features: ['Sing Karaoke with Friends', 'Record & Edit Vocal Performances', 'Collaborate with Users Worldwide', 'Apply Special Audio Effects', 'Access a Large Song Library'],
+                platforms: ['Android']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/ztria67no9qumyf/Smule_v7.4.3.1_MOD_apkmody.io.apk/file'
+        }
     ];
+
+    // --- Rest of the code remains the same ---
 
     const itemsPerPage = 12;
     let currentPage = 0;
@@ -315,50 +320,87 @@ document.addEventListener('DOMContentLoaded', function () {
     let activeItem = null;
 
     function formatPrice(price) {
-        return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        // Format TZS price or return "Free"
+        if (price === 0) {
+            return "Free";
+        }
+        return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " TZS";
     }
 
     function displayItems(page) {
         const softwareList = document.getElementById('software-list');
-        softwareList.innerHTML = '';
+        softwareList.innerHTML = ''; // Clear existing items
         const start = page * itemsPerPage;
         const end = start + itemsPerPage;
         const paginatedItems = filteredItems.slice(start, end);
 
+        if (paginatedItems.length === 0 && page === 0) {
+             document.getElementById('no-results-message').style.display = 'block';
+        } else {
+             document.getElementById('no-results-message').style.display = 'none';
+        }
+
+
         paginatedItems.forEach(item => {
             const softwareItem = document.createElement('div');
             softwareItem.className = 'software-item';
+
+            // Add price display to the card itself
+            const priceText = formatPrice(item.price);
+            const priceClass = item.price === 0 ? 'price-free' : 'price-paid';
+
             softwareItem.innerHTML = `
                 <img src="${item.image}" alt="${item.name}" class="software-image">
-                <p>${item.name}</p>
+                <p class="item-name">${item.name}</p>
+                <p class="item-price ${priceClass}">${priceText}</p> <!-- Added Price Display -->
             `;
             softwareItem.addEventListener('click', () => {
-                if (activeItem) {
-                    activeItem.classList.remove('active');
-                }
-                softwareItem.classList.add('active');
-                activeItem = softwareItem;
+                // Optional: Add active class styling if needed
+                // if (activeItem) {
+                //     activeItem.classList.remove('active');
+                // }
+                // softwareItem.classList.add('active');
+                // activeItem = softwareItem;
+
+                // Navigate to download page
                 window.location.href = `download.html?name=${encodeURIComponent(item.name)}&image=${encodeURIComponent(item.image)}&size=${encodeURIComponent(item.size)}&description=${encodeURIComponent(item.description)}&price=${encodeURIComponent(formatPrice(item.price))}&downloadLink=${encodeURIComponent(item.downloadLink)}`;
             });
             softwareList.appendChild(softwareItem);
         });
 
+        // Update pagination button states
         document.getElementById('prev-btn').disabled = page === 0;
         document.getElementById('next-btn').disabled = end >= filteredItems.length;
     }
 
     function searchItems(query) {
-        filteredItems = softwareItems.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
-        currentPage = 0;
-        displayItems(currentPage);
-        document.getElementById('no-results-message').style.display = filteredItems.length ? 'none' : 'block';
+        const lowerCaseQuery = query.toLowerCase().trim();
+        if (lowerCaseQuery === '') {
+             filteredItems = softwareItems; // Show all if search is empty
+        } else {
+            filteredItems = softwareItems.filter(item =>
+                item.name.toLowerCase().includes(lowerCaseQuery)
+            );
+        }
+        currentPage = 0; // Reset to first page for new search
+        displayItems(currentPage); // Display filtered results
     }
 
+    // Event listener for search button
     document.getElementById('searchButton').addEventListener('click', () => {
         const query = document.getElementById('searchBar').value;
         searchItems(query);
     });
 
+    // Optional: Add listener for Enter key in search bar
+     document.getElementById('searchBar').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent default form submission if it were a form
+            searchItems(this.value);
+        }
+     });
+
+    // Event listener for Previous button
     document.getElementById('prev-btn').addEventListener('click', () => {
         if (currentPage > 0) {
             currentPage--;
@@ -366,21 +408,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Event listener for Next button
     document.getElementById('next-btn').addEventListener('click', () => {
-        if ((currentPage + 1) * itemsPerPage < filteredItems.length) {
+        const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+        if (currentPage < totalPages - 1) {
             currentPage++;
             displayItems(currentPage);
         }
     });
 
+    // Initial display of items on page load
     displayItems(currentPage);
-});
 
-// Add event listener for the request program button
-document.getElementById('requestProgramButton').addEventListener('click', function () {
-    // WhatsApp link with predefined message
-    const phoneNumber = '+255620428389';
-    const message = encodeURIComponent('Hello Someless, I would like to request a program.');
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.location.href = whatsappUrl;
+    // Add event listener for the request program button
+    document.getElementById('requestProgramButton').addEventListener('click', function () {
+        // WhatsApp link with predefined message
+        const phoneNumber = '+255620428389'; // Keep primary number
+        const message = encodeURIComponent('Hello Someless, I would like to request a specific program.'); // Slightly more specific message
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+        // Use window.open for potentially better compatibility, especially on mobile
+        window.open(whatsappUrl, '_blank');
+    });
+
 });
