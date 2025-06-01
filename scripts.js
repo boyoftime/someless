@@ -1,6 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
     
     const softwareItems = [
+
+        {
+            name: 'DRPU BULK SMS PRO FULL VERSION CRACK 2025', // Changed name
+            image: 'images/drpu pro.jpg',
+            size: 0.38,
+            description: JSON.stringify({
+                about: 'DRPU Bulk SMS is a software solution for sending large volumes of text messages from a computer to mobile phones without needing internet connectivity. It allows users to send customized text messages to individuals or groups, using various methods like USB modems, GSM, or Android/Windows-based mobile phones. The software is designed for businesses and organizations to quickly communicate with customers, clients, or other contacts. ', // Rephrased
+                features: [
+                    'Pro features Unlocked',             // Rephrased
+                    'Unlimited access',           // Rephrased
+                    'No payment needed', // Rephrased
+                ],
+                platforms: ['Windows PC Only']
+            }),
+            price: 25000,
+            downloadLink: 'https://www.mediafire.com/file/k2rbby1dqwjc75t/DRPU+Bulk+sms+complete+2025.zip/file'
+        },
+
+
         {
             name: 'Angry Birds 2 (Enhanced Gameplay Data)', // Changed name
             image: 'images/angrybird2.jpg',
