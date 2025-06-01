@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             name: 'DRPU BULK SMS PRO FULL VERSION CRACK 2025', // Changed name
             image: 'images/drpu pro.jpg',
-            size: 0.38,
+            size: 20.11,
             description: JSON.stringify({
                 about: 'DRPU Bulk SMS is a software solution for sending large volumes of text messages from a computer to mobile phones without needing internet connectivity. It allows users to send customized text messages to individuals or groups, using various methods like USB modems, GSM, or Android/Windows-based mobile phones. The software is designed for businesses and organizations to quickly communicate with customers, clients, or other contacts. ', // Rephrased
                 features: [
