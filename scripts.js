@@ -2,6 +2,38 @@ document.addEventListener('DOMContentLoaded', function () {
     
     const softwareItems = [
 
+         {
+            name: 'Angry Bird 2', // Changed name
+            image: 'angrybird2ms.jpg',
+            size: 105.08,
+            description: JSON.stringify({
+                about: 'MS Patcher for Angry bird 2. help you to patch game data in one click', // Rephrased
+                features: [
+                    'Unlimited gems', 
+                    'Unlimited hats',  
+                    'Antban--No ban online',     
+                ],
+                platforms: ['Windows PC Only']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/x7dnf59jj9ubu9t/MS+Patcher+Angry+Bird2.exe/file'
+        },
+
+        {
+            name: 'Offroad Racing PC Unlimited', // Changed name
+            image: 'images/offroad.png',
+            size: 0.08,
+            description: JSON.stringify({
+                about: 'Combining beautiful HD graphics, realistic physics and easy-to-use controls, Offroad Racing is a unique and fun racing game for Windows. Collect coins to upgrade your vehicles and unlock new levels. Perform stunts to earn extra coins. With loads of exciting and tricky levels, Offroad Racing provides you endless hours of fun.', // Rephrased
+                features: [
+                    'Unlimited coins',        
+                ],
+                platforms: ['Windows PC Only']
+            }),
+            price: 0,
+            downloadLink: 'https://www.mediafire.com/file/k2rbby1dqwjc75t/DRPU+Bulk+sms+complete+2025.zip/file'
+        },
+
         {
             name: 'DRPU BULK SMS PRO FULL VERSION CRACK 2025', // Changed name
             image: 'images/drpu pro.jpg',
