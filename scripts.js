@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
 
          {
-            name: 'Angry Bird 2', // Changed name
+            name: 'Angry Bird 2 MS PATCHER', // Changed name
             image: 'images/angrybird2new.jpg',
             size: 105.08,
             description: JSON.stringify({
