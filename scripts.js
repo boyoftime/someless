@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     
     const softwareItems = [
+        
 
          {
             name: 'Angry Bird 2', // Changed name
-            image: 'angrybird2ms.jpg',
+            image: 'images/angrybird2new.jpg',
             size: 105.08,
             description: JSON.stringify({
                 about: 'MS Patcher for Angry bird 2. help you to patch game data in one click', // Rephrased
